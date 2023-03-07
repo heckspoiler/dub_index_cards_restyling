@@ -3,54 +3,27 @@ font-family: 'ABeeZee', sans-serif;
 font-family: 'Abel', sans-serif;
 font-family: 'Press Start 2P', cursive;*/
 
-:root {
-  --paragraph-font: "ABeeZee", sans-serif;
-}
-
-body {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
 /* general styling */
 
 .card_editor--main-section {
   width: 100vw;
-  background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
   overflow: hidden;
 }
 
-/* arrow styling */
-
-.pointing_arrow {
-  position: fixed;
-  stroke: white;
-  width: 10%;
-  margin-left: 75%;
-  margin-top: 10rem;
-  transform: rotate(10deg);
-  animation-name: arrow_animation;
-  animation-duration: 2.5s;
-  animation-delay: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  opacity: 0;
-  transition: opacity 0.5s ease-in;
+.body-overlay {
+  background-image: radial-gradient(
+    circle at 15px 15px,
+    rgb(70, 70, 70) 1.2px,
+    transparent 0
+  );
+  background-size: 25px 25px;
+  box-shadow: inset -2px 0px 0px 15px rgb(255 255 255);
+  height: 100vh;
+  margin: 0;
+  z-index: -10000;
 }
 
 @keyframes arrow_animation {
-  0% {
-    margin-left: 75%;
-    margin-top: 10rem;
-  }
-  50% {
-    margin-left: 75.3%;
-    margin-top: 9.8rem;
-  }
-  100% {
-    margin-left: 75%;
-    margin-top: 10rem;
-  }
 }
 
 /* title styling */
@@ -71,7 +44,9 @@ body {
   margin-top: 2rem;
   font-family: "Press Start 2P";
   color: white;
-  font-size: 1rem;
+  font-size: 1.2rem;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 .card_editor--main-title {
@@ -122,6 +97,51 @@ body {
   opacity: 0.6;
   z-index: 9999;
   padding: 0;
+}
+
+/* arrow styling */
+
+.pointing_arrow {
+  position: absolute;
+  stroke: white;
+  width: 80%;
+  height: 85%;
+  opacity: 0;
+  animation: myAnim 5s ease 0s infinite normal backwards;
+  transition: opacity 0.5s ease-in;
+  background-color: yellow;
+  border-radius: 50%;
+  z-index: -1000;
+  border: 1px white;
+  border-style: dashed solid;
+}
+
+@keyframes myAnim {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    transform-origin: center center;
+  }
+
+  10% {
+    animation-timing-function: ease-in;
+    transform: scale(0.91);
+  }
+
+  17% {
+    animation-timing-function: ease-out;
+    transform: scale(0.98);
+  }
+
+  33% {
+    animation-timing-function: ease-in;
+    transform: scale(0.87);
+  }
+
+  45% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
 }
 
 .add-folder-p {
@@ -192,31 +212,31 @@ body {
   z-index: 1000;
   visibility: visible;
   min-height: 65%;
-  max-height: 100%;
+  max-height: 75%;
   width: 80vw;
   overflow: auto;
   margin-left: 10vw;
-  margin-top: 27vh;
+  margin-top: 28vh;
   border-radius: 10px;
   display: grid;
-  gap: 18rem;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 20rem;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
   border: 1px solid white;
   padding-left: 3rem;
-  padding-right: 12rem;
+  padding-right: 3rem;
 }
 
 /* added folders */
 
 .added_folder--div {
-  position: relative;
-  display: inline-block;
 }
 
 .added_folder--div img {
   position: absolute;
-  height: 11rem;
-  width: 15rem;
+  height: 9rem;
+  width: 12rem;
   margin-top: 4vh;
 }
 
@@ -228,8 +248,8 @@ body {
   margin-top: 4vh;
   margin-left: 16vw;
   font-family: "Abel", sans-serif;
-  color: white;
-  font-size: 1.2rem;
+  color: black;
+  font-size: 1rem;
   gap: 15px;
 
   width: 15rem;
@@ -241,8 +261,8 @@ body {
 
 .added_folder--folder-name {
   font-weight: bold;
-  font-size: 1.5rem;
-  border-bottom: 2px solid white;
+  font-size: 1.3rem;
+  border-bottom: 1px solid black;
 }
 
 #folder-tags,

@@ -1,3 +1,8 @@
+:root {
+  --blue: 0, 0, 255;
+  --red: 255, 0, 0;
+}
+
 h1 {
   font-family: "Press Start 2P", cursive;
   text-align: center;
@@ -22,8 +27,13 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  background-repeat: no-repeat;
-  background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
   overflow: hidden;
   height: 100vh;
+  background-image: radial-gradient(
+    circle at 15px 15px,
+    rgb(70, 70, 70) 1.2px,
+    transparent 0
+  );
+  background-size: 25px 25px;
+  box-shadow: inset -2px 0px 0px 15px rgb(255 255 255);
 }

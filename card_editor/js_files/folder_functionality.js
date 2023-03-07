@@ -9,6 +9,13 @@ class Folder {
 addButton.addEventListener("click", (event) => {
   event.preventDefault();
 
+  let colorArray = ["red", "blue", "green", "yellow"];
+
+  const randomIndex = Math.floor(Math.random() * colorArray.length);
+  const randomColor = colorArray[randomIndex];
+
+  console.log(randomColor);
+
   const folderSection = document.querySelector(
     ".folder_section--added-folders"
   );
@@ -28,6 +35,7 @@ addButton.addEventListener("click", (event) => {
   // append the new folder to the DOM
   const folderDiv = document.createElement("div");
   folderDiv.className = "added_folder--div";
+  folderDiv.style.backgroundColor = `${randomColor}`;
   folderDiv.innerHTML = `
     <img src="../icons_and_images/folderPix.png" class="added_folder--img"/>
     <div class="added_folder--paragraph-container">
