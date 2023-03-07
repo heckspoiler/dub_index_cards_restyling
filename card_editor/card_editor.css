@@ -1,0 +1,356 @@
+/*
+font-family: 'ABeeZee', sans-serif;
+font-family: 'Abel', sans-serif;
+font-family: 'Press Start 2P', cursive;*/
+
+:root {
+  --paragraph-font: "ABeeZee", sans-serif;
+}
+
+body {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* general styling */
+
+.card_editor--main-section {
+  width: 100vw;
+  background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+  overflow: hidden;
+}
+
+/* arrow styling */
+
+.pointing_arrow {
+  position: fixed;
+  stroke: white;
+  width: 10%;
+  margin-left: 75%;
+  margin-top: 10rem;
+  transform: rotate(10deg);
+  animation-name: arrow_animation;
+  animation-duration: 2.5s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+@keyframes arrow_animation {
+  0% {
+    margin-left: 75%;
+    margin-top: 10rem;
+  }
+  50% {
+    margin-left: 75.3%;
+    margin-top: 9.8rem;
+  }
+  100% {
+    margin-left: 75%;
+    margin-top: 10rem;
+  }
+}
+
+/* title styling */
+
+.card_editor--main-title-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.card_editor--main-title-section h1 {
+  font-size: 2rem;
+}
+
+.card_editor--sub-title {
+  margin-top: 2rem;
+  font-family: "Press Start 2P";
+  color: white;
+  font-size: 1rem;
+}
+
+.card_editor--main-title {
+  font-size: 3rem;
+}
+
+.fa-arrow-right-from-bracket {
+  position: absolute;
+  color: white;
+  font-size: 2.5rem;
+  transform: rotate(180deg);
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+
+.logout__door {
+  height: 10%;
+  position: absolute;
+  color: white;
+  font-size: 10px;
+  margin-left: 2rem;
+  margin-top: -6rem;
+  opacity: 0.6;
+  transition: margin-top 1s ease-in-out;
+}
+
+.logout__door:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* add folder section */
+
+.card_editor--add-folder {
+  position: absolute;
+  width: 14rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 80%;
+  top: 10%;
+}
+
+.folder_image {
+  height: 80%;
+  width: 80%;
+  opacity: 0.6;
+  z-index: 9999;
+  padding: 0;
+}
+
+.add-folder-p {
+  position: absolute;
+  background-color: transparent;
+  font-size: 4rem;
+  margin-top: 12px;
+  margin-right: 18px;
+  color: white;
+  border: none;
+  z-index: 10000;
+  transform: skew(12deg);
+  width: 2.4rem;
+  text-shadow: 1px 1px 1px black;
+  width: 50%;
+  text-align: center;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  opacity: 0.6;
+}
+
+.add-folder-p:hover,
+.add-folder-p:active {
+  opacity: 1;
+}
+
+.add-folder-p {
+  cursor: pointer;
+}
+
+/* folder section */
+
+.card_editor--folder-section {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+}
+
+.folder_section--wording-section {
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.folder_section--title {
+  font-size: 1.5rem;
+  height: 3rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+.folder_section--smiley {
+  transform: rotate(90deg);
+  margin-top: 2rem;
+  font-size: 3rem;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* folder section added folders */
+
+.folder_section--added-folders {
+  position: absolute;
+  z-index: 1000;
+  visibility: visible;
+  min-height: 65%;
+  max-height: 100%;
+  width: 80vw;
+  overflow: auto;
+  margin-left: 10vw;
+  margin-top: 27vh;
+  border-radius: 10px;
+  display: grid;
+  gap: 18rem;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid white;
+  padding-left: 3rem;
+  padding-right: 12rem;
+}
+
+/* added folders */
+
+.added_folder--div {
+  position: relative;
+  display: inline-block;
+}
+
+.added_folder--div img {
+  position: absolute;
+  height: 11rem;
+  width: 15rem;
+  margin-top: 4vh;
+}
+
+.added_folder--paragraph-container {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 4vh;
+  margin-left: 16vw;
+  font-family: "Abel", sans-serif;
+  color: white;
+  font-size: 1.2rem;
+  gap: 15px;
+
+  width: 15rem;
+}
+
+.added_folder--paragraph-container p {
+  padding: 0.6rem;
+}
+
+.added_folder--folder-name {
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-bottom: 2px solid white;
+}
+
+#folder-tags,
+.added_folder--tags {
+  font-style: italic;
+  color: blue;
+}
+
+.added_folder--tags:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* folder form*/
+.folder_section--folder-form {
+  position: absolute;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  background: #3bdc1d;
+  background: -webkit-linear-gradient(top right, #3bdc1d, #fbd306);
+  background: -moz-linear-gradient(top right, #3bdc1d, #fbd306);
+  background: linear-gradient(to bottom left, #3bdc1d, #fbd306);
+  opacity: 0.8;
+  width: 60vw;
+  height: 80vh;
+  z-index: 10000;
+  margin-left: 20vw;
+  margin-top: 10vh;
+  align-items: center;
+  justify-content: center;
+  font-family: "Abel", sans-serif;
+  border-radius: 20px;
+  gap: 10rem;
+  box-shadow: 4px 4px 8px grey;
+}
+
+#add-folder-form {
+  display: grid;
+  gap: 2em;
+  margin-left: -25rem;
+}
+
+#add-folder-form div {
+  display: grid;
+  gap: 1rem;
+}
+
+#add-folder-form input {
+  height: 3rem;
+  width: 14rem;
+}
+
+.folder_image_form {
+  position: absolute;
+  height: 30%;
+  margin-left: 30rem;
+  width: 30%;
+  background: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-name: alien_animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes alien_animation {
+  0% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+#add-folder-form button {
+  height: 2.5rem;
+  width: 8rem;
+  background-color: rgba(121, 159, 217);
+  opacity: 0.8;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+#add-folder-form button:hover,
+#add-folder-form button:active {
+  opacity: 1;
+}
+
+.create-me-text {
+  position: absolute;
+  margin-left: 28rem;
+  font-size: 2rem;
+  color: white;
+  animation-name: alien_animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#add-folder-form input {
+  border-radius: 5px;
+  border: none;
+  padding-left: 10px;
+}

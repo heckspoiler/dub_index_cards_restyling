@@ -1,0 +1,663 @@
+/*
+font-family: 'ABeeZee', sans-serif;
+font-family: 'Abel', sans-serif;
+font-family: 'Press Start 2P', cursive;*/
+
+/*general styles*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+  overflow: hidden;
+}
+
+.landing__page {
+  font-family: "Abel", sans-serif;
+  display: flex;
+  background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+  opacity: 85%;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*landing page background icons styles*/
+
+.landing__page--icons {
+  position: absolute;
+  z-index: -10000;
+  opacity: 80%;
+}
+
+@keyframes floatalien {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.fa-alien-8bit {
+  position: absolute;
+  font-size: 18vw;
+  margin-top: 15vh;
+  margin-left: 5vh;
+  color: blue;
+  opacity: 30%;
+  transform: rotate(100deg);
+  animation: floatalien 4s ease-in-out infinite;
+}
+
+@keyframes floatsaturn {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: rotate(40deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.fa-planet-ringed {
+  position: absolute;
+  font-size: 16vw;
+  color: blue;
+  margin-top: 13vh;
+  margin-left: 57vw;
+  opacity: 40%;
+  animation: floatsaturn 8s ease-in-out infinite;
+}
+
+@keyframes curly {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: rotate(40deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.fa-brackets-curly {
+  position: absolute;
+  font-size: 20vw;
+  color: blue;
+  opacity: 50%;
+  overflow: hidden;
+  margin-top: 50vh;
+  margin-left: 70vw;
+  transform: rotate(40deg);
+  animation: curly 10s ease-out infinite;
+  z-index: -1000;
+}
+
+@keyframes flask {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: rotate(-40deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.fa-flask {
+  position: absolute;
+  font-size: 18vw;
+  margin-top: 60vh;
+  color: blue;
+  opacity: 45%;
+  margin-left: 5vw;
+  transform: rotate(-30deg);
+  animation: flask 8s ease-in-out infinite;
+}
+
+/* landing page title animation*/
+
+.landing__page--title {
+  position: relative;
+  animation: slide-in 1s ease-in-out forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    top: -100px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* landing page nav bar styling */
+
+.landing__page--nav--bar {
+  background: transparent;
+  width: 15%;
+  position: absolute;
+  z-index: 100000;
+  height: 100%;
+  font-family: "Press Start 2P", cursive;
+  display: flex;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  left: -200px;
+  transition: left 01s ease-in-out;
+}
+
+.landing__page--nav--bar--list {
+  display: flex;
+  background: transparent;
+  flex-direction: column;
+  gap: 8vh;
+  width: 100%;
+  height: 70%;
+  margin-top: auto;
+  margin-bottom: auto;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transform: skewY(2deg);
+}
+
+.landing__page--nav--bar--listobject {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+  text-align: center;
+  height: 2vh;
+}
+
+.landing__page--nav--bar--link {
+  text-decoration: none;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  margin: auto;
+  transition: font-size 0.4s ease-in-out, border-image 2s ease-in;
+  padding: 5px;
+  border: 1vh solid transparent;
+  border-radius: 1px;
+  outline-style: solid;
+  outline-color: white;
+  outline-width: 0vw;
+  transition: font-size 0.4s ease-in-out, 0.4s ease-in-out;
+  opacity: 0;
+  transform: skewY(-2deg);
+}
+
+.landing__page--nav--bar--link:hover,
+.landing__page--nav--bar--link:active {
+  font-size: 1.28em;
+  transform: skewY(10deg);
+  text-shadow: 1px 1px 0.5px white;
+}
+
+/* hamburger nav bar styling */
+
+.header__main-nav--hamburger {
+  width: 3rem;
+  height: 3rem;
+  position: fixed;
+  top: 2rem;
+  left: 3rem;
+  cursor: pointer;
+  opacity: 0.8;
+  padding: 0.7rem;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.line {
+  width: 100%;
+  height: 0.3rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 0.2rem;
+  transition: all 0.4s ease-in-out;
+}
+
+.clicked {
+  left: 0px;
+}
+
+.clicked--bg {
+  opacity: 0.5;
+}
+
+.clicked .line-1 {
+  transform: rotateZ(-45deg) translate(-0.4rem, 0.3rem);
+}
+
+.clicked .line-2 {
+  opacity: 0;
+}
+
+.clicked .line-3 {
+  transform: rotateZ(45deg) translate(-0.4rem, -0.3rem);
+}
+
+.landing__page--nav--bar--list li:nth-child(1) {
+  transition: all 0.2s ease-in-out 0.2s;
+}
+.landing__page--nav--bar--list li:nth-child(2) {
+  transition: all 0.2s ease-in-out 0.4s;
+}
+.landing__page--nav--bar--list li:nth-child(3) {
+  transition: all 0.2s ease-in-out 0.6s;
+}
+.landing__page--nav--bar--list li:nth-child(4) {
+  transition: all 0.2s ease-in-out 0.8s;
+}
+.landing__page--nav--bar--list li:nth-child(5) {
+  transition: all 0.2s ease-in-out 1s;
+}
+
+.fade {
+  opacity: 1;
+}
+
+/*landing page text styles*/
+
+.landing__page--intro--text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4vh;
+}
+
+.landing__page--intro--text p {
+  font-size: calc(1em + 0.5vh);
+  width: 80%;
+  text-align: center;
+}
+
+/* button styling */
+
+.landing__page--button--section {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  margin-top: 10vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing__page--button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Abel", sans-serif;
+  max-width: 5rem;
+  min-width: 10vw;
+  height: 6vh;
+  border-radius: 5px;
+  box-shadow: 2px 2px 10px 4px #504d4d40;
+  font-size: 1.2rem;
+}
+
+.landing__page--login--button {
+  background-color: #cfebcc;
+  opacity: 80%;
+}
+
+.landing__page--signup--button {
+  background-color: rgba(121, 159, 217, 0.6);
+  opacity: 80%;
+}
+
+.landing__page--login--button:hover {
+  opacity: 100%;
+  cursor: pointer;
+}
+
+.landing__page--signup--button:hover {
+  background-color: rgba(121, 159, 217, 1);
+  cursor: pointer;
+}
+
+.landing__page--button--icons {
+  padding-top: 1rem;
+  display: flex;
+  font-size: 2.5em;
+  gap: 7vw;
+  margin-top: 3vh;
+}
+
+.fa-facebook {
+  color: #3b5998;
+}
+
+.fa-google {
+  background: -webkit-linear-gradient(
+    #4285f4,
+    #4285f4 25%,
+    #34a853 25%,
+    #34a853 50%,
+    #fbbc05 50%,
+    #fbbc05 75%,
+    #ea4335 75%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* login section */
+
+.landing__page--login--section {
+  z-index: 10000;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+  border: 4px solid white;
+  height: 80vh;
+  width: 70vw;
+  opacity: 0;
+  margin-top: auto;
+  margin-left: auto;
+}
+
+.landing__page--login--section--visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.landing__page--login--section h2 {
+  font-family: "Press Start 2P", cursive;
+  color: white;
+  text-align: center;
+  width: 40vw;
+  line-height: 2em;
+  margin-top: -5vh;
+  margin-bottom: 5vh;
+  font-size: 1.2rem;
+}
+
+.landing__page--login--section input {
+  padding-left: 10px;
+}
+
+.login_section--form {
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  width: 20%;
+
+  justify-content: space-evenly;
+}
+
+.login_section--form button {
+  width: 30%;
+}
+
+#username {
+  font-family: "Abel", sans-serif;
+  background-color: white;
+  border: white;
+  border-radius: 5px;
+  height: 4vh;
+}
+
+#password {
+  font-family: "Abel", sans-serif;
+  background-color: white;
+  border: white;
+  border-radius: 5px;
+  height: 4vh;
+}
+
+.log__in--button {
+  background-color: rgba(121, 159, 217, 0.6);
+  border: 3px solid rgba(121, 159, 217, 1);
+  width: 100%;
+  color: white;
+  height: 5vh;
+  font-family: "Abel", sans-serif;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login__anchor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.username__forgotten {
+  text-decoration: none;
+  margin-top: 2vh;
+  color: rgb(32, 96, 192);
+  cursor: pointer;
+}
+
+.cross {
+  width: 25px;
+  height: 25px;
+  margin-left: 60vw;
+  position: relative;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Safari and Chrome */
+  cursor: pointer;
+  margin-right: 2vw;
+  margin-top: 2vh;
+}
+
+.cross:before,
+.cross:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: white;
+}
+
+.cross:before {
+  left: 50%;
+  width: 30%;
+  margin-left: -15%;
+  height: 100%;
+}
+
+.cross:after {
+  top: 50%;
+  height: 30%;
+  margin-top: -15%;
+  width: 100%;
+}
+
+/* sign up section */
+
+.landing__page--signup--section {
+  z-index: 10000;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+  border: 4px solid white;
+  height: 80vh;
+  width: 70vw;
+  margin-top: auto;
+  margin-left: auto;
+}
+
+.landing__page--signup--section--visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.landing__page--signup--section h2 {
+  font-family: "Press Start 2P", cursive;
+  color: white;
+  text-align: center;
+  width: 40vw;
+  line-height: 2em;
+}
+
+.sign__up--form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 60%;
+}
+
+.sign__up--first-section,
+.sign__up--second-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign__up--first-section section,
+.sign__up--second-section section {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.sign__up--first-section input,
+.sign__up--second-section input {
+  font-family: "Abel", sans-serif;
+  background-color: white;
+  border: white;
+  border-radius: 5px;
+  height: 5vh;
+  width: 20vw;
+}
+
+.sign__up--button {
+  width: 15vw;
+  cursor: pointer;
+}
+
+.sign__up--button:hover,
+.sign__up--button:active,
+.log__in--button:hover,
+.log__in--button:active {
+  background-color: rgba(121, 159, 217, 1);
+}
+
+@media only screen and (max-width: 480px) {
+  /* landing page general */
+
+  .landing__page--title {
+    font-size: 1.5rem;
+  }
+
+  .landing__page--intro--text {
+    font-size: 0.8rem;
+    margin-top: 5rem;
+  }
+
+  /*sign up section*/
+  .landing__page--signup--section h2 {
+    font-family: "Press Start 2P", cursive;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    width: 40vw;
+    line-height: 2em;
+  }
+
+  .sign__up--button {
+    margin-top: 45px;
+    background-color: rgba(121, 159, 217, 1);
+  }
+  /* login section */
+  .landing__page--login--section h2 {
+    font-size: 1em;
+    margin-top: -7vh;
+    margin-bottom: 5vh;
+  }
+
+  /* nav bar */
+
+  .landing__page--nav--bar {
+    width: 100%;
+    background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+    left: -500px;
+    font-size: 1rem;
+  }
+
+  .clicked {
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 382px) {
+  .landing__page--title {
+    font-size: 1.2rem;
+  }
+
+  .landing__page--button--icons {
+    font-size: 2rem;
+  }
+
+  .landing__page--button--section {
+    height: 30%;
+  }
+
+  .landing__page--button--icons {
+    margin-bottom: -100px;
+    gap: 4rem;
+  }
+
+  .landing__page--signup--section h2 {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+  }
+
+  .landing__page--login--section h2 {
+    font-size: 0.8rem;
+    margin-top: -7vh;
+    margin-bottom: 5vh;
+  }
+
+  .landing__page--button {
+    font-size: 1rem;
+  }
+}

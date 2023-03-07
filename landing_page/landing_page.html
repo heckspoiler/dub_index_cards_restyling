@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <script
+    src="https://kit.fontawesome.com/6519fd179a.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="./landing_page.js" defer></script>
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles_landing.css" />
+    <link rel="stylesheet" href="../general-files/general_styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Abel&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <title>Dub Index Cards</title>
+  </head>
+  <body>
+    <section class="landing__page--icons icons">
+      <i class="fa-regular fa-alien-8bit landing__page--background--icon"></i>
+      <i class="fa-light fa-planet-ringed landing__page--background--icon"></i>
+      <i class="fa-solid fa-brackets-curly landing__page--background--icon"></i>
+      <i class="fa-solid fa-flask landing__page--background--icon"></i>
+    </section>
+    <section class="landing__page--nav--bar">
+      <div class="header__main-nav--hamburger">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+      </div>
+      <ul class="landing__page--nav--bar--list">
+        <li class="landing__page--nav--bar--listobject">
+          <a class="landing__page--nav--bar--link link-1" href="#">Settings</a>
+        </li>
+        <li class="landing__page--nav--bar--listobject">
+          <a
+            class="landing__page--nav--bar--link link-2"
+            href="../about files/about.html"
+            >About</a
+          >
+        </li>
+        <li class="landing__page--nav--bar--listobject">
+          <a class="landing__page--nav--bar--link link-3" href="#">Credits</a>
+        </li>
+        <li class="landing__page--nav--bar--listobject">
+          <a class="landing__page--nav--bar--link link-4" href="#">Contact</a>
+        </li>
+        <li class="landing__page--nav--bar--listobject">
+          <a class="landing__page--nav--bar--link link-5" href="#"
+            >Support us!</a
+          >
+        </li>
+      </ul>
+    </section>
+    <section class="landing__page">
+      <section class="landing__page--title--section">
+        <h1 class="title landing__page--title">Dub Index Cards</h1>
+      </section>
+      <section class="landing__page--intro--text">
+        <p class="landing__page--intro--text--p">
+          You want to improve on the go?<br />
+          Create your own index cards and have them ready where ever your are!
+        </p>
+      </section>
+      <section class="landing__page--button--section">
+        <button
+          type="button"
+          class="button landing__page--button landing__page--login--button"
+        >
+          Log In
+        </button>
+        <button
+          type="button"
+          class="button landing__page--button landing__page--signup--button"
+        >
+          Sign Up
+        </button>
+        <section class="landing__page--button--icons">
+          <i class="fa-brands fa-github"></i>
+          <i class="fa-brands fa-google"></i>
+          <i class="fa-brands fa-facebook"></i>
+        </section>
+      </section>
+      <section
+        class="landing__page--login--section landing__page--popup--section"
+      >
+        <div class="cross"></div>
+        <h2 class="login__section--title">Welcome back you smart person!</h2>
+        <form
+          action="/tutorial/action.html"
+          class="login_section--form"
+          method="POST"
+          onsubmit="submitForm(event)"
+        >
+          <label for="username">E-Mail</label><br />
+          <input
+            type="text"
+            id="username"
+            name="username"
+            maxlength="16"
+            placeholder="  Email or Username"
+            required
+          /><br />
+          <label for="password">Password</label><br />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="  ○○○○○○○○○"
+            required
+          /><br />
+          <section class="show__password--section">
+            <input type="checkbox" id="show-password" />
+            <label for="show-password">Show password</label>
+          </section>
+          <section class="logged__in--section">
+            <input type="checkbox" id="logged__in--radio" />
+            <label for="logged__in--radio">Keep me logged in</label>
+          </section>
+          <a class="login__anchor" href="../card_editor/card_editor.html"
+            ><button type="submit" class="log__in--button">Login</button>
+          </a>
+          <a href="#" class="username__forgotten">Forgot password...</a>
+        </form>
+      </section>
+      <section class="landing__page--signup--section">
+        <div class="cross cross__sign--up"></div>
+        <h2 class="login__section--title">Sign up for your future self!</h2>
+        <form class="sign__up--form">
+          <section class="sign__up--first-section">
+            <section>
+              <label for="firstname">First Name</label>
+              <input
+                type="text"
+                id="firstname"
+                name="firstname"
+                placeholder="  First Name"
+              />
+            </section>
+            <section>
+              <label for="birthday">Date of Birth</label>
+              <input type="date" id="birthday" name="birthday" />
+            </section>
+            <section>
+              <label for="password-signup">Password</label>
+              <input
+                type="password"
+                id="password-signup"
+                placeholder="  ○○○○○○○○○"
+              />
+            </section>
+          </section>
+          <section class="sign__up--second-section">
+            <section>
+              <label for="lastname">Last Name</label>
+              <input
+                type="text"
+                id="lastname"
+                name="lastname"
+                placeholder="  Last Name"
+              />
+            </section>
+            <section>
+              <label for="email">E-Mail</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="  e.g. you@dub-index.com"
+              />
+            </section>
+            <section>
+              <label for="password-signup-2">Repeat Password</label>
+              <input
+                type="password"
+                id="password-signup-2"
+                placeholder="  ○○○○○○○○○"
+              />
+            </section>
+          </section>
+        </form>
+        <input type="submit" value="Sign Up!" class="sign__up--button" />
+      </section>
+    </section>
+  </body>
+</html>

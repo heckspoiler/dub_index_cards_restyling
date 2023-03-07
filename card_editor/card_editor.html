@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Editor</title>
+    <link rel="stylesheet" href="./card_editor.css" />
+    <link rel="stylesheet" href="../general-files/general_styles.css" />
+    <link rel="stylesheet" href="./css_files/icon_styling.css" />
+    <link rel="stylesheet" href="./css_files/subfolder_styling.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Abel&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="./js_files/card_editor_main_styling.js" defer></script>
+    <script src="./js_files/folder_functionality.js" defer></script>
+    <script src="./js_files/create_subfolder.js" defer></script>
+  </head>
+  <body>
+    <section class="folder_section--folder-form">
+      <form id="add-folder-form">
+        <div>
+          <label for="folder-name">Folder Name</label>
+          <input type="text" id="folder-name" name="folder-name" required />
+        </div>
+        <div>
+          <label for="folder-created">Date added</label>
+          <input type="date" id="folder-created" name="folder-created" />
+        </div>
+        <div>
+          <label for="folder-tags">Tags</label>
+          <input type="text" id="folder-tags" name="folder-tags" />
+        </div>
+        <button type="submit" id="add-folder-button">Create Folder</button>
+      </form>
+      <img src="../icons_and_images/folderPix.png" class="folder_image_form" />
+      <p class="create-me-text">create me!</p>
+    </section>
+
+    <div class="folder_section--added-folders">
+      <!-- <div class="added_folder--div">
+        <img
+          src="../icons_and_images/folderPix.png"
+          class="added_folder--img"
+        />
+        <div class="added_folder--paragraph-container">
+          <p class="added_folder--folder-name">${folderNameInput.value}</p>
+          <p class="added_folder--topic">${topicInput.value}</p>
+          <p class="added_folder--chapter">${chapterInput.value}</p>
+          <p class="added_folder--tags">${tagsInput.value}</p>
+        </div>
+      </div>
+      -->
+    </div>
+    <!--<div class="folder_section--added-subfolders" ></div>-->
+    <a href="../landing_page/landing_page.html"
+      ><img src="../icons_and_images/door.svg" class="logout__door"
+    /></a>
+    <section class="card_editor--main-section">
+      <img
+        src="../icons_and_images/6-arrow_white.svg"
+        alt="pointing_arrow"
+        class="pointing_arrow"
+      />
+      <section class="card_editor--main-title-section">
+        <h1 class="card_editor--main-title"></h1>
+        <h2 class="card_editor--sub-title">Add and manage your folders here</h2>
+      </section>
+      <section class="card_editor--add-folder">
+        <img src="../icons_and_images/folderPix.png" class="folder_image" />
+        <span class="add-folder-p">&#43;</span>
+      </section>
+      <section class="card_editor--folder-section">
+        <div class="folder_section--wording-section">
+          <h1 class="folder_section--title">
+            You haven't added any folders yet...
+          </h1>
+          <h1 class="folder_section--smiley">:(</h1>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>

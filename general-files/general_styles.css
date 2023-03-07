@@ -1,0 +1,29 @@
+h1 {
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+  color: transparent;
+  font-size: calc(1rem + 3vw);
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  text-shadow: 1px 1px 1px rgba(184, 217, 176, 0.1);
+  text-shadow: 1px 1px 1px white;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+  overflow: hidden;
+  height: 100vh;
+}
