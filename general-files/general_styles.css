@@ -30,10 +30,10 @@ body {
   overflow: hidden;
   height: 100vh;
   background-image: radial-gradient(
-    circle at 15px 15px,
-    rgb(70, 70, 70) 1.2px,
+    circle at 10px 15px,
+    rgb(70, 70, 70) 1px,
     transparent 0
   );
   background-size: 25px 25px;
-  box-shadow: inset -2px 0px 0px 15px rgb(255 255 255);
+  box-shadow: inset -2px 0px 0px 0px white;
 }

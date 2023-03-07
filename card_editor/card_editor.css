@@ -107,10 +107,10 @@ font-family: 'Press Start 2P', cursive;*/
   width: 80%;
   height: 85%;
   opacity: 0;
-  animation: myAnim 5s ease 0s infinite normal backwards;
+  animation: myAnim 3s ease 0s infinite normal backwards;
   transition: opacity 0.5s ease-in;
   background-color: yellow;
-  border-radius: 50%;
+  border-radius: 80%;
   z-index: -1000;
   border: 1px white;
   border-style: dashed solid;
@@ -128,17 +128,17 @@ font-family: 'Press Start 2P', cursive;*/
     transform: scale(0.91);
   }
 
-  17% {
+  27% {
     animation-timing-function: ease-out;
     transform: scale(0.98);
   }
 
-  33% {
+  53% {
     animation-timing-function: ease-in;
     transform: scale(0.87);
   }
 
-  45% {
+  85% {
     animation-timing-function: ease-out;
     transform: scale(1);
   }
@@ -213,9 +213,14 @@ font-family: 'Press Start 2P', cursive;*/
   visibility: visible;
   min-height: 65%;
   max-height: 75%;
-  width: 80vw;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 90vw;
   overflow: auto;
-  margin-left: 10vw;
   margin-top: 28vh;
   border-radius: 10px;
   display: grid;
@@ -231,22 +236,22 @@ font-family: 'Press Start 2P', cursive;*/
 /* added folders */
 
 .added_folder--div {
+  display: flex;
+  border-radius: 5px;
 }
 
 .added_folder--div img {
-  position: absolute;
-  height: 9rem;
-  width: 12rem;
+  height: 8rem;
+  width: 11rem;
   margin-top: 4vh;
 }
 
 .added_folder--paragraph-container {
   display: flex;
-  position: absolute;
   flex-direction: column;
   justify-content: center;
   margin-top: 4vh;
-  margin-left: 16vw;
+  margin-left: 1vw;
   font-family: "Abel", sans-serif;
   color: black;
   font-size: 1rem;
