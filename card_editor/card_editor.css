@@ -228,7 +228,7 @@ font-family: 'Press Start 2P', cursive;*/
   grid-auto-rows: 20rem;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
-  border: 1px solid white;
+
   padding-left: 3rem;
   padding-right: 3rem;
 }
@@ -285,24 +285,51 @@ font-family: 'Press Start 2P', cursive;*/
 .folder_section--folder-form {
   position: absolute;
   display: flex;
-  visibility: hidden;
-  opacity: 0;
-  background: #3bdc1d;
-  background: -webkit-linear-gradient(top right, #3bdc1d, #fbd306);
-  background: -moz-linear-gradient(top right, #3bdc1d, #fbd306);
-  background: linear-gradient(to bottom left, #3bdc1d, #fbd306);
-  opacity: 0.8;
+  visibility: visible;
+  background-color: transparent;
+  opacity: 1;
   width: 60vw;
   height: 80vh;
   z-index: 10000;
-  margin-left: 20vw;
-  margin-top: 10vh;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   align-items: center;
   justify-content: center;
   font-family: "Abel", sans-serif;
   border-radius: 20px;
   gap: 10rem;
-  box-shadow: 4px 4px 8px grey;
+}
+
+.screen-overlay {
+  position: absolute;
+  display: flex;
+  visibility: visible;
+  background-position: left top;
+  background: repeating-radial-gradient(
+    white,
+    white 5px,
+    rgb(16, 236, 12) 5px,
+    rgb(16, 236, 12) 6px
+  );
+  opacity: 1;
+  width: 59.4vw;
+  height: 79vh;
+  z-index: 10000;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  font-family: "Abel", sans-serif;
+  border-radius: 20px;
+  gap: 10rem;
+  box-shadow: 4px 4px 8px rgba(16, 236, 12, 0.16);
+  z-index: -10000;
 }
 
 #add-folder-form {

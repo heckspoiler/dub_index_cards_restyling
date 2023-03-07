@@ -13,6 +13,7 @@ const folderSection = document.querySelector(".folder_section--added-folders");
 const mainWordingSection = document.querySelector(
   ".folder_section--wording-section"
 );
+const addingOverlay = document.querySelector(".screen-overlay");
 
 plusSign.addEventListener("mouseover", () => {
   folderImage.style.opacity = "1";
@@ -40,4 +41,5 @@ plusSign.addEventListener("click", () => {
   formSection.style.transition = "opacity 0.6s ease-in-out";
   plusSign.style.visibility = "hidden";
   pointingArrow.style.backgroundColor = "transparent";
+  addingOverlay.style.visibility = "visible";
 });

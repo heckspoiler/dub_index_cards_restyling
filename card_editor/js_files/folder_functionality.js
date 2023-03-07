@@ -9,7 +9,15 @@ class Folder {
 addButton.addEventListener("click", (event) => {
   event.preventDefault();
 
-  let colorArray = ["red", "blue", "green", "yellow"];
+  let colorArray = [
+    "rgba(255, 221, 214, 0.4)",
+    "rgba(255, 254, 214, 0.4)",
+    "rgba(214, 255, 253, 0.4)",
+    "rgba(247, 217, 254, 0.4)",
+    "rgba(217, 219, 254, 0.4)",
+    "rgba(220, 254, 217 , 0.4)",
+    "rgba( 254, 221, 217 , 0.4)",
+  ];
 
   const randomIndex = Math.floor(Math.random() * colorArray.length);
   const randomColor = colorArray[randomIndex];
@@ -20,6 +28,7 @@ addButton.addEventListener("click", (event) => {
     ".folder_section--added-folders"
   );
   const folderNameInput = document.querySelector("#folder-name");
+  const addingOverlay = document.querySelector(".screen-overlay");
   const createdInput = document.querySelector("#folder-created");
   const tagsInput = document.querySelector("#folder-tags");
   const date = new Date(createdInput.value);
@@ -55,6 +64,7 @@ addButton.addEventListener("click", (event) => {
   plusSign.style.visibility = "visible";
   mainSection.style.opacity = 1;
   mainWordingSection.style.visibility = "hidden";
+  addingOverlay.style.visibility = "hidden";
 });
 
 // retrieve the name from localStorage
