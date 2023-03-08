@@ -186,31 +186,6 @@ function fadeIn(elements) {
   });
 }
 
-function animateIntro() {
-  alien.style.left = "-500px";
-  alien.style.transform = "rotate(-80deg)";
-  setTimeout(() => {
-    alien.style.transition = "left 1s ease-out, transform 1s ease-out";
-    alien.style.left = "5vh";
-    alien.style.transform = "rotate(-40deg)";
-  }, 500);
-
-  brackets.style.left = "100vw";
-  brackets.style.transform = "rotate(160deg)";
-  setTimeout(() => {
-    brackets.style.transition = "left 1s ease-out, transform 1s ease-in";
-    brackets.style.left = "70vw";
-  }, 800);
-
-  saturn.style.left = "50vw";
-  setTimeout(() => {
-    saturn.style.transition = "left 1.2s ease-in-out";
-    saturn.style.left = "10vw";
-  }, 800);
-}
-
-animateIntro();
-
 // submit form leading to new html
 
 function submitForm(event) {

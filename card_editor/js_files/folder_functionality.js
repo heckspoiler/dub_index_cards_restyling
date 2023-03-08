@@ -6,7 +6,7 @@ class Folder {
   }
 }
 
-addButton.addEventListener("click", (event) => {
+addButton.addEventListener("mouseup", (event) => {
   event.preventDefault();
 
   let colorArray = [
@@ -28,7 +28,6 @@ addButton.addEventListener("click", (event) => {
     ".folder_section--added-folders"
   );
   const folderNameInput = document.querySelector("#folder-name");
-  const addingOverlay = document.querySelector(".screen-overlay");
   const createdInput = document.querySelector("#folder-created");
   const tagsInput = document.querySelector("#folder-tags");
   const date = new Date(createdInput.value);
@@ -64,7 +63,6 @@ addButton.addEventListener("click", (event) => {
   plusSign.style.visibility = "visible";
   mainSection.style.opacity = 1;
   mainWordingSection.style.visibility = "hidden";
-  addingOverlay.style.visibility = "hidden";
 });
 
 // retrieve the name from localStorage
@@ -72,3 +70,20 @@ const name = localStorage.getItem("name");
 
 // set the title
 document.querySelector(".card_editor--main-title").innerHTML = `Hello, ${name}`;
+
+// hover cross
+const backgroundSvg = document.querySelector(".folder_section--bg-svg");
+const createFolderCross = document.querySelector(".cross");
+const createFolderField = document.querySelector(
+  ".folder_section--folder-form"
+);
+createFolderCross.addEventListener("click", (event) => {
+  formSection.style.visibility = "hidden";
+  plusSign.style.visibility = "visible";
+  mainSection.style.opacity = 1;
+  mainWordingSection.style.visibility = "visible";
+});
+
+if (folderSection.innerHTML === "") {
+  console.log(mainWordingSection.innerHTML);
+}
