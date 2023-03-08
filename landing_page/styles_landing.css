@@ -56,7 +56,7 @@ body {
 .landing__page--title {
   position: relative;
   animation: slide-in 1s ease-in-out forwards;
-  animation-delay: 0.8s;
+  animation-delay: 0.4s;
   color: rgb(75, 155, 155);
   top: -1000px;
 }
@@ -103,7 +103,6 @@ body {
   position: absolute;
   z-index: 100000;
   height: 100%;
-  font-family: "Press Start 2P", cursive;
   display: flex;
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
@@ -137,18 +136,13 @@ body {
 
 .landing__page--nav--bar--link {
   text-decoration: none;
-  color: transparent;
-  -webkit-text-stroke: 1px black;
+  color: rgba(123, 120, 230);
+  font-family: "Rubik Mono One", sans-serif;
   text-transform: uppercase;
   font-size: 1.1em;
   margin: auto;
   transition: font-size 0.4s ease-in-out, border-image 2s ease-in;
   padding: 5px;
-  border: 1vh solid transparent;
-  border-radius: 1px;
-  outline-style: solid;
-  outline-color: black;
-  outline-width: 0vw;
   transition: font-size 0.4s ease-in-out, 0.4s ease-in-out;
   opacity: 0;
   transform: skewY(-2deg);
@@ -415,8 +409,8 @@ body {
   height: 5vh;
   font-family: sans-serif;
   font-size: 1.2rem;
-  border-radius: 5px;
   cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out;
 }
 
 .login__anchor {
