@@ -13,12 +13,23 @@
       href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Abel&family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap"
+      rel="stylesheet"
+    />
 
     <script src="./js_files/card_editor_main_styling.js" defer></script>
     <script src="./js_files/folder_functionality.js" defer></script>
     <script src="./js_files/create_subfolder.js" defer></script>
   </head>
   <body>
+    <img
+      src="../images_svgs/french-text.svg"
+      alt=""
+      class="folder_section--bg-svg"
+    />
     <section class="folder_section--folder-form">
       <form id="add-folder-form">
         <div>
@@ -27,15 +38,24 @@
         </div>
         <div>
           <label for="folder-created">Date added</label>
-          <input type="date" id="folder-created" name="folder-created" />
+          <input
+            type="date"
+            id="folder-created"
+            name="folder-created"
+            required
+          />
         </div>
         <div>
           <label for="folder-tags">Tags</label>
-          <input type="text" id="folder-tags" name="folder-tags" />
+          <input type="text" id="folder-tags" name="folder-tags" required />
         </div>
         <button type="submit" id="add-folder-button">Create Folder</button>
       </form>
-      <img src="../icons_and_images/folderPix.png" class="folder_image_form" />
+      <img
+        src="../icons_and_images/folderPix.png"
+        class="folder_image_form"
+        alt="Moving Folder for the create-section"
+      />
       <p class="create-me-text">create me!</p>
     </section>
     <div class="screen-overlay"></div>

@@ -44,9 +44,9 @@ addButton.addEventListener("click", (event) => {
   // append the new folder to the DOM
   const folderDiv = document.createElement("div");
   folderDiv.className = "added_folder--div";
-  folderDiv.style.backgroundColor = `${randomColor}`;
+  folderDiv.style.background = `${randomColor}`;
   folderDiv.innerHTML = `
-    <img src="../icons_and_images/folderPix.png" class="added_folder--img"/>
+    <img src="../icons_and_images/folderPix.png" class="added_folder--img" alt="Image of an added Folder"/>
     <div class="added_folder--paragraph-container">
       <p class="added_folder--folder-name"> ${newFolder.folderName}</p>
       <p class="added_folder--created">created: ${newFolder.created}</p>
