@@ -10,13 +10,13 @@ addButton.addEventListener("click", (event) => {
   event.preventDefault();
 
   let colorArray = [
-    "rgba(255, 221, 214, 0.4)",
-    "rgba(255, 254, 214, 0.4)",
-    "rgba(214, 255, 253, 0.4)",
-    "rgba(247, 217, 254, 0.4)",
-    "rgba(217, 219, 254, 0.4)",
-    "rgba(220, 254, 217 , 0.4)",
-    "rgba( 254, 221, 217 , 0.4)",
+    "rgba(255, 221, 214, 1)",
+    "rgba(255, 254, 214, 1)",
+    "rgba(214, 255, 253, 1)",
+    "rgba(247, 217, 254, 1)",
+    "rgba(217, 219, 254, 1)",
+    "rgba(220, 254, 217 ,1)",
+    "rgba( 254, 221, 217 , 1)",
   ];
 
   const randomIndex = Math.floor(Math.random() * colorArray.length);
