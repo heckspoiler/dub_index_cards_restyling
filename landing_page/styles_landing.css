@@ -309,6 +309,10 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.brand-logo:hover {
+  cursor: crosshair;
+}
+
 .yellow-background-container {
   position: absolute;
   display: flex;

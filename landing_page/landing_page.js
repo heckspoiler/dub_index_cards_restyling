@@ -163,6 +163,14 @@ googleLogo.addEventListener("mouseleave", (event) => {
   yellowBlobs.children[1].classList.remove("yellow-background-opacity-50");
 });
 
+facebookLogo.addEventListener("mouseenter", (event) => {
+  yellowBlobs.children[2].classList.add("yellow-background-opacity-50");
+});
+
+facebookLogo.addEventListener("mouseleave", (event) => {
+  yellowBlobs.children[2].classList.remove("yellow-background-opacity-50");
+});
+
 console.log(yellowBlobs);
 // Event Listeners
 hamburger.addEventListener("click", () => {
