@@ -228,6 +228,11 @@ body {
   text-align: center;
 }
 
+.text-coloring {
+  color: rgba(123, 120, 230, 0.8);
+  background: white;
+}
+
 /* button styling */
 
 .landing__page--button--section {
