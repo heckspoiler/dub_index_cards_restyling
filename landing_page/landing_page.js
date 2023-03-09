@@ -140,7 +140,30 @@ const showPasswordCheckbox = document.getElementById("show-password");
 const passValue = document.getElementById("password-signup");
 const confpassValue = document.getElementById("password-signup-2");
 const signUpFormButton = document.getElementById("sign__up--button");
+const yellowBlobs = document.querySelector(".yellow-background-container");
+const googleLogo = document.querySelector(".fa-google");
+const facebookLogo = document.querySelector(".fa-facebook");
+const githubLogo = document.querySelector(".fa-github");
 
+githubLogo.addEventListener("mouseenter", (event) => {
+  yellowBlobs.firstElementChild.classList.add("yellow-background-opacity-50");
+});
+
+githubLogo.addEventListener("mouseleave", (event) => {
+  yellowBlobs.firstElementChild.classList.remove(
+    "yellow-background-opacity-50"
+  );
+});
+
+googleLogo.addEventListener("mouseenter", (event) => {
+  yellowBlobs.children[1].classList.add("yellow-background-opacity-50");
+});
+
+googleLogo.addEventListener("mouseleave", (event) => {
+  yellowBlobs.children[1].classList.remove("yellow-background-opacity-50");
+});
+
+console.log(yellowBlobs);
 // Event Listeners
 hamburger.addEventListener("click", () => {
   hamburgerContainer.classList.toggle("clicked");
