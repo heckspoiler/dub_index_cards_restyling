@@ -250,7 +250,6 @@ font-family: 'Press Start 2P', cursive;*/
 
 .added_folder--div {
   display: flex;
-  border-radius: 5px;
 }
 
 .added_folder--div img {
@@ -325,7 +324,7 @@ font-family: 'Press Start 2P', cursive;*/
 }
 
 .added_folder--buttons button:hover {
-  box-shadow: 1px 4px 1px black;
+  box-shadow: 2px 4px 1px black;
 }
 
 /* folder form*/

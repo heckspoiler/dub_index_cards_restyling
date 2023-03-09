@@ -292,21 +292,11 @@ body {
 }
 
 .fa-facebook {
-  color: #3b5998;
+  background: transparent;
 }
 
 .fa-google {
-  background: -webkit-linear-gradient(
-    #4285f4,
-    #4285f4 25%,
-    #34a853 25%,
-    #34a853 50%,
-    #fbbc05 50%,
-    #fbbc05 75%,
-    #ea4335 75%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: transparent;
 }
 
 .brand-logo:hover {
@@ -327,10 +317,35 @@ body {
   border-radius: 50%;
   filter: blur(10px);
   opacity: 0%;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .yellow-background-opacity-50 {
   opacity: 50%;
+}
+
+.background-github {
+  background: -webkit-linear-gradient(black, black 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.background-google {
+  background: -webkit-linear-gradient(
+    #4285f4,
+    #4285f4 25%,
+    #34a853 25%,
+    #34a853 50%,
+    #fbbc05 50%,
+    #fbbc05 75%,
+    #ea4335 75%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.background-facebook {
+  color: #3b5998;
 }
 /* login section */
 

@@ -147,28 +147,34 @@ const githubLogo = document.querySelector(".fa-github");
 
 githubLogo.addEventListener("mouseenter", (event) => {
   yellowBlobs.firstElementChild.classList.add("yellow-background-opacity-50");
+  githubLogo.classList.add("background-github");
 });
 
 githubLogo.addEventListener("mouseleave", (event) => {
   yellowBlobs.firstElementChild.classList.remove(
     "yellow-background-opacity-50"
   );
+  githubLogo.classList.remove("background-github");
 });
 
 googleLogo.addEventListener("mouseenter", (event) => {
   yellowBlobs.children[1].classList.add("yellow-background-opacity-50");
+  googleLogo.classList.add("background-google");
 });
 
 googleLogo.addEventListener("mouseleave", (event) => {
   yellowBlobs.children[1].classList.remove("yellow-background-opacity-50");
+  googleLogo.classList.remove("background-google");
 });
 
 facebookLogo.addEventListener("mouseenter", (event) => {
   yellowBlobs.children[2].classList.add("yellow-background-opacity-50");
+  facebookLogo.classList.add("background-facebook");
 });
 
 facebookLogo.addEventListener("mouseleave", (event) => {
   yellowBlobs.children[2].classList.remove("yellow-background-opacity-50");
+  facebookLogo.classList.remove("background-facebook");
 });
 
 console.log(yellowBlobs);
