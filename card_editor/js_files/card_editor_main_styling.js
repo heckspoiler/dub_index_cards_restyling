@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     missingFolderTitle.style.opacity = 1;
     missingFolderSmiley.style.opacity = 1;
     pointingArrow.style.opacity = 0.5;
-  }, 2000);
+  }, 1000);
 });
 
 plusSign.addEventListener("click", () => {
@@ -43,3 +43,7 @@ plusSign.addEventListener("click", () => {
   pointingArrow.style.backgroundColor = "transparent";
   addingOverlay.style.visibility = "visible";
 });
+
+if (folderSection.innerHTML === "") {
+  mainWordingSection.style.visibility = "hidden";
+}

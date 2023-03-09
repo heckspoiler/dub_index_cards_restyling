@@ -45,12 +45,20 @@ addButton.addEventListener("mouseup", (event) => {
   folderDiv.className = "added_folder--div";
   folderDiv.style.background = `${randomColor}`;
   folderDiv.innerHTML = `
-    <img src="../icons_and_images/folderPix.png" class="added_folder--img" alt="Image of an added Folder"/>
-    <div class="added_folder--paragraph-container">
-      <p class="added_folder--folder-name"> ${newFolder.folderName}</p>
-      <p class="added_folder--created">created: ${newFolder.created}</p>
-      <p class="added_folder--tags"> ${newFolder.tags}</p>
-    </div>
+  <img
+  src="../icons_and_images/folderPix.png"
+  class="added_folder--img"
+  alt="Image of an added Folder"
+/>
+<div class="added_folder--paragraph-container">
+  <p class="added_folder--folder-name">${newFolder.folderName}</p>
+  <p class="added_folder--created">created: ${newFolder.created}</p>
+  <p class="added_folder--tags">${newFolder.tags}</p>
+  <div class="added_folder--buttons">
+    <button id="access-button">Access</button
+    ><button id="delete-button">Delete</button>
+  </div>
+</div>
   `;
   folderSection.insertBefore(folderDiv, folderSection.firstElementChild);
 
@@ -83,7 +91,3 @@ createFolderCross.addEventListener("click", (event) => {
   mainSection.style.opacity = 1;
   mainWordingSection.style.visibility = "visible";
 });
-
-if (folderSection.innerHTML === "") {
-  console.log(mainWordingSection.innerHTML);
-}

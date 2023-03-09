@@ -256,18 +256,21 @@ body {
   background-color: #cfebcc;
   border-radius: 0;
   transition: all 0.2s ease-in-out;
+  letter-spacing: 8px;
 }
 
 .landing__page--signup--button {
   background-color: rgba(121, 159, 217, 0.6);
   border-radius: 0;
   transition: all 0.2s ease-in-out;
+  letter-spacing: 8px;
 }
 
 .landing__page--login--button:hover {
   opacity: 100%;
   cursor: pointer;
   box-shadow: 6px 10px 1px black;
+  letter-spacing: 11px;
 }
 
 .landing__page--signup--button:hover {
@@ -275,6 +278,7 @@ body {
   cursor: pointer;
   box-shadow: 6px 10px 1px black;
   opacity: 1;
+  letter-spacing: 11px;
 }
 
 .landing__page--button--icons {
@@ -319,7 +323,6 @@ body {
   height: 80vh;
   width: 70vw;
   opacity: 1;
-  border-radius: 15px;
   margin-top: auto;
   margin-left: auto;
   box-shadow: 8px 8px 2px black;
@@ -374,7 +377,6 @@ body {
   font-family: "Abel", sans-serif;
   background-color: white;
   border: white;
-  border-radius: 5px;
   height: 4vh;
   padding-left: 10px;
 }
@@ -383,7 +385,6 @@ body {
   font-family: "Abel", sans-serif;
   background-color: white;
   border: white;
-  border-radius: 5px;
   height: 4vh;
   padding-left: 10px;
 }
@@ -395,7 +396,8 @@ body {
   font-family: "Abel", sans-serif;
   font-size: 1.2rem;
   cursor: pointer;
-  transition: box-shadow 0.2s ease-in-out;
+  letter-spacing: 8px;
+  transition: letter-spacing 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .login__anchor {
@@ -513,7 +515,6 @@ body {
   font-family: "Abel", sans-serif;
   background-color: white;
   border: white;
-  border-radius: 5px;
   height: 5vh;
   width: 20vw;
 }
@@ -530,6 +531,7 @@ body {
   background-color: rgba(121, 159, 217, 1);
   box-shadow: 6px 10px 1px black;
   border: 4px solid black;
+  letter-spacing: 11px;
 }
 
 @media only screen and (max-width: 480px) {

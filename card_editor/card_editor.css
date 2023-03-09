@@ -294,6 +294,40 @@ font-family: 'Press Start 2P', cursive;*/
   cursor: pointer;
 }
 
+.added_folder--buttons {
+  height: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.added_folder--buttons button {
+  width: 5rem;
+  border-radius: none;
+  border: 1px solid black;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+#access-button {
+  background-color: rgba(121, 159, 217, 0.8);
+}
+
+#delete-button {
+  background-color: rgba(255, 0, 0, 0.6);
+}
+
+#access-button:hover {
+  background-color: rgba(121, 159, 217, 1);
+}
+
+#delete-button:hover {
+  background-color: rgba(255, 0, 0, 0.8);
+}
+
+.added_folder--buttons button:hover {
+  box-shadow: 1px 4px 1px black;
+}
+
 /* folder form*/
 .folder_section--folder-form {
   position: absolute;
