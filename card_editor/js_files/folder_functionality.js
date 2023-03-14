@@ -22,10 +22,8 @@ addButton.addEventListener("mouseup", (event) => {
   const randomIndex = Math.floor(Math.random() * colorArray.length);
   const randomColor = colorArray[randomIndex];
 
-  console.log(randomColor);
-
   const folderSection = document.querySelector(
-    ".folder_section--added-folders"
+    ".folder_section--added-folders-container"
   );
   const folderNameInput = document.querySelector("#folder-name");
   const createdInput = document.querySelector("#folder-created");
@@ -39,6 +37,22 @@ addButton.addEventListener("mouseup", (event) => {
     formattedDate,
     tagsInput.value.toLowerCase()
   );
+
+  //writing the function to open a folder (basically replacing the whole html)
+
+  // const
+
+  const openFolderFunction = function (e) {};
+
+  //note: this process is done by bubbling or so. It's not possible to access an object that is dynamically
+  // created in the DOM the usual way, that's why we have to check if the parent element that is in the HTML document
+  // at some point contains an element with a certain class, here "access-button-class".
+
+  folderSection.addEventListener("click", (e) => {
+    if (e.target.classList.contains("access-button-class")) {
+      console.log("arschloch");
+    }
+  });
 
   // append the new folder to the DOM
   const folderDiv = document.createElement("div");
@@ -55,8 +69,8 @@ addButton.addEventListener("mouseup", (event) => {
   <p class="added_folder--created">created: ${newFolder.created}</p>
   <p class="added_folder--tags">${newFolder.tags}</p>
   <div class="added_folder--buttons">
-    <button id="access-button">Access</button
-    ><button id="delete-button">Delete</button>
+    <button id="access-button" class="access-button-class">Access</button
+    ><button id="delete-button" class="delete-button-class">Delete</button>
   </div>
 </div>
   `;
@@ -69,6 +83,7 @@ addButton.addEventListener("mouseup", (event) => {
 
   formSection.style.visibility = "hidden";
   plusSign.style.visibility = "visible";
+  folderSection.style.visibility = "visible";
   mainSection.style.opacity = 1;
   mainWordingSection.style.visibility = "hidden";
 });
@@ -91,3 +106,5 @@ createFolderCross.addEventListener("click", (event) => {
   mainSection.style.opacity = 1;
   mainWordingSection.style.visibility = "visible";
 });
+
+// access folder
