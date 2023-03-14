@@ -26,12 +26,12 @@
 
 .folder_section--added-subfolders {
   display: flex;
-  background-image: radial-gradient(red 10%, transparent 10%),
-    radial-gradient(#fafafa 20%, transparent 20%);
-  background-color: white;
-  background-position: 0 0, 50px 50px;
-  background-size: 8px 8px;
+  background-color: yellow;
   flex-direction: column;
+}
+
+.subfolder-button-container {
+  margin-top: 1rem;
 }
 
 .subfolder-button {
@@ -39,6 +39,28 @@
   width: 6rem;
   height: 3rem;
   cursor: pointer;
+  border: 1px solid black;
+  transition: box-shadow 0.2s ease-in-out, background-color 0.1s ease-in;
+}
+
+.subfolder-button:hover {
+  box-shadow: 2px 2px 1px black;
+}
+
+.subfolder-button-edit {
+  background-color: rgba(121, 159, 217, 0.8);
+}
+
+.subfolder-button-edit:hover {
+  background-color: rgba(121, 159, 217, 1);
+}
+
+.subfolder-button-delete {
+  background-color: rgba(245, 7, 7, 0.8);
+}
+
+.subfolder-button-delete:hover {
+  background-color: rgba(245, 7, 7, 1);
 }
 
 .subfolder-title {
@@ -50,7 +72,6 @@
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
   height: 8rem;
   justify-content: center;
   align-items: center;
@@ -58,6 +79,6 @@
 
 .subfolder-span {
   font-family: "Abel", sans-serif;
-  margin-top: 2rem;
   font-size: 1.2rem;
+  padding: 1.2rem;
 }
