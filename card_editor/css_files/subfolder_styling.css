@@ -43,8 +43,21 @@
 
 .subfolder-title {
   font-family: "Rubik Mono One", sans-serif;
+  margin-top: 2rem;
+}
+
+.subfolder-span-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  height: 8rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .subfolder-span {
-  background-color: yellow;
+  font-family: "Abel", sans-serif;
+  margin-top: 2rem;
+  font-size: 1.2rem;
 }
