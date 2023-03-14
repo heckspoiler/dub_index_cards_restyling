@@ -40,11 +40,13 @@
   height: 3rem;
   cursor: pointer;
   border: 1px solid black;
-  transition: box-shadow 0.2s ease-in-out, background-color 0.1s ease-in;
+  transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in,
+    letter-spacing 0.1s ease-in-out;
 }
 
 .subfolder-button:hover {
   box-shadow: 2px 2px 1px black;
+  letter-spacing: 3px;
 }
 
 .subfolder-button-edit {
@@ -61,6 +63,14 @@
 
 .subfolder-button-delete:hover {
   background-color: rgba(245, 7, 7, 1);
+}
+
+.subfolder-button-learn {
+  background-color: rgba(149, 195, 144, 0.8);
+}
+
+.subfolder-button-learn:hover {
+  background-color: rgba(149, 195, 144, 1);
 }
 
 .subfolder-title {
