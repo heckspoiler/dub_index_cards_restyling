@@ -106,15 +106,12 @@ addButton.addEventListener("mouseup", (event) => {
 const subFolderTitle = document.querySelector(".added_folder--folder-name");
 const subFolderSubTitle = document.querySelector(".card_editor--sub-title");
 
-const titleTest = function (e) {
-  if (e.target.classList.contains("added_folder--folder-name")) {
-    console.log("bitch");
-  }
-};
+// const titleTest = function (e) {
+//   if (e.target.classList.contains("added_folder--folder-name")) {
+//     console.log("bitch");
+//   }
+// };
 
-console.log(titleTest());
-
-console.log(titleTest);
 folderSectionContainer.addEventListener("click", (e) => {
   if (e.target.classList.contains("access-button-class")) {
     document.querySelector(
@@ -124,8 +121,6 @@ folderSectionContainer.addEventListener("click", (e) => {
     //   newFolder.folderName;
     subFolderSubTitle.innerHTML =
       "Add, edit and delete your index card stacks here!";
-    document.querySelector(".card_editor--main-title").innerHTML =
-      e.target.textContent;
   }
 });
 
@@ -239,7 +234,9 @@ folderSectionContainer.addEventListener("click", (e) => {
 //     document.querySelector(
 //       ".folder_section--added-subfolders-container"
 //     ).style.visibility = "visible";
-//     document.querySelector(".card_editor--main-title").innerHTML =
-//       newFolder.folderName;
+//     // document.querySelector(".card_editor--main-title").innerHTML =
+//     //   newFolder.folderName;
+//     subFolderSubTitle.innerHTML =
+//       "Add, edit and delete your index card stacks here!";
 //   }
 // });
