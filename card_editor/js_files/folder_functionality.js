@@ -125,7 +125,7 @@ folderSectionContainer.addEventListener("click", (e) => {
     subFolderSubTitle.innerHTML =
       "Add, edit and delete your index card stacks here!";
     document.querySelector(".card_editor--main-title").innerHTML =
-      titleTest.value;
+      e.target.textContent;
   }
 });
 
