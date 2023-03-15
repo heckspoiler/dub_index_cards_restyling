@@ -14,13 +14,18 @@ const mainWordingSection = document.querySelector(
   ".folder_section--wording-section"
 );
 const addingOverlay = document.querySelector(".screen-overlay");
+const imagesClickable = document.querySelectorAll(".clickable_image");
 
 plusSign.addEventListener("mouseover", () => {
-  folderImage.style.opacity = "1";
+  imagesClickable.forEach((img) => {
+    img.style.opacity = "1";
+  });
 });
 
 plusSign.addEventListener("mouseout", () => {
-  folderImage.style.opacity = "0.6";
+  imagesClickable.forEach((img) => {
+    img.style.opacity = "0.6";
+  });
 });
 
 document.addEventListener("DOMContentLoaded", () => {

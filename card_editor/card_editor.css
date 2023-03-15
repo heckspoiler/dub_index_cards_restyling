@@ -91,7 +91,7 @@ font-family: 'Press Start 2P', cursive;*/
 
 /* add folder section */
 
-.card_editor--add-folder {
+.clickable-adding-section {
   position: absolute;
   width: 14rem;
   height: 10rem;
@@ -102,12 +102,13 @@ font-family: 'Press Start 2P', cursive;*/
   top: 10%;
 }
 
-.folder_image {
+.clickable_image {
   height: 80%;
   width: 80%;
   opacity: 0.6;
   z-index: 9999;
   padding: 0;
+  transition: opacity 0.1s ease-in;
 }
 
 /* arrow styling */
