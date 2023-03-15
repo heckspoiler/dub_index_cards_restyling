@@ -3,7 +3,7 @@
 .folder_section--added-subfolders-container {
   position: absolute;
   z-index: 1000;
-  visibility: visible;
+  visibility: hidden;
   min-height: 65%;
   max-height: 75%;
   position: absolute;
@@ -30,6 +30,28 @@
   flex-direction: column;
 }
 
+.subfolder-title {
+  font-family: "Rubik Mono One", sans-serif;
+  margin-top: 2rem;
+}
+
+.subfolder-span-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 8rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.subfolder-span {
+  font-family: "Abel", sans-serif;
+  font-size: 1.2rem;
+  padding: 1.2rem;
+}
+
+/* button styling */
+
 .subfolder-button-container {
   margin-top: 1rem;
 }
@@ -40,13 +62,11 @@
   height: 3rem;
   cursor: pointer;
   border: 1px solid black;
-  transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in,
-    letter-spacing 0.1s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in;
 }
 
 .subfolder-button:hover {
   box-shadow: 2px 2px 1px black;
-  letter-spacing: 3px;
 }
 
 .subfolder-button-edit {
@@ -71,24 +91,4 @@
 
 .subfolder-button-learn:hover {
   background-color: rgba(149, 195, 144, 1);
-}
-
-.subfolder-title {
-  font-family: "Rubik Mono One", sans-serif;
-  margin-top: 2rem;
-}
-
-.subfolder-span-container {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  height: 8rem;
-  justify-content: center;
-  align-items: center;
-}
-
-.subfolder-span {
-  font-family: "Abel", sans-serif;
-  font-size: 1.2rem;
-  padding: 1.2rem;
 }
