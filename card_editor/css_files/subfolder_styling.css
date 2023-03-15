@@ -26,7 +26,6 @@
 
 .folder_section--added-subfolders {
   display: flex;
-  background-color: yellow;
   flex-direction: column;
 }
 
