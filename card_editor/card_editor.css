@@ -547,7 +547,7 @@ font-family: "Rubik Mono One", sans-serif;*/
 .index_cards_creating_subfolder_container {
   height: 30rem;
   width: 40rem;
-  background-color: rgb(187, 209, 226);
+  background-color: #5ee7df;
   position: absolute;
   left: 0;
   top: 0;
@@ -558,6 +558,7 @@ font-family: "Rubik Mono One", sans-serif;*/
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 2px solid black;
 }
 
 .index_cards_creating_subfolder_form {
@@ -573,9 +574,7 @@ font-family: "Rubik Mono One", sans-serif;*/
   display: flex;
   align-items: center;
   flex-direction: column;
-  font-family: "Rubik Mono One", sans-serif;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+
   color: white;
 }
 
@@ -584,5 +583,69 @@ font-family: "Rubik Mono One", sans-serif;*/
   height: 80%;
   align-items: center;
   justify-content: center;
-  gap: 5rem;
+  gap: 2.5rem;
+}
+
+.create-subfolder-button {
+  height: 4rem;
+  width: 9rem;
+  font-family: "Abel", sans-serif;
+  font-size: 1.1rem;
+  border-radius: none;
+  border: none;
+  background-color: rgba(121, 159, 217, 0.8);
+  border: 1px solid black;
+  color: white;
+  transition: background-color 0.2s ease-in, box-shadow 0.2s ease-in-out;
+}
+
+.create-subfolder-button:hover {
+  box-shadow: 4px 4px 1px black;
+  background-color: rgba(121, 159, 217, 1);
+  cursor: pointer;
+}
+
+.subfolder-input-field {
+  height: 3rem;
+  width: 12rem;
+  font-family: "Abel", sans-serif;
+  padding: 10px;
+  font-weight: 300;
+  font-size: 1.3rem;
+  border: 1px solid black;
+}
+
+.index_cards_creating_subfolder_paragraph {
+  font-family: "Abel", sans-serif;
+  color: black;
+  font-size: 1.2rem;
+}
+
+.index_cards_creating_subfolder_span {
+  font-style: italic;
+  color: black;
+}
+
+.index_cards_creating_subfolder_title {
+  height: 2rem;
+  width: 100%;
+  font-family: "Rubik Mono One", sans-serif;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+
+  background-color: #5ee7df;
+  text-align: center;
+}
+
+.create_subfolder_svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin-top: -10rem;
+  margin-left: -2rem;
+  height: 70%;
+  width: 70%;
+  rotate: 8deg;
 }

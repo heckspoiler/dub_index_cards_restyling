@@ -76,19 +76,38 @@
     </section>
 
     <section class="index_cards_creating_subfolder_container">
+      <img
+        src="../images_svgs/create_subfolder_logo.svg"
+        class="create_subfolder_svg"
+      />
       <form class="index_cards_creating_subfolder_form">
         <div class="index_cards_creating_subfolder_input_container">
           <label for="subfolder-name"
-            ><h2>Name your index card stack!</h2></label
+            ><h2 class="index_cards_creating_subfolder_title">
+              Name your index card stack!
+            </h2></label
           >
+          <p class="index_cards_creating_subfolder_paragraph">
+            Call it something recognizable, like
+            <span class="index_cards_creating_subfolder_span"
+              >"Chapitre 1: Vocabulaire"</span
+            >
+          </p>
           <input
             type="text"
             id="subfolder-name"
+            class="subfolder-input-field"
             name="subfolder-name"
             required
           />
         </div>
-        <button type="submit" id="add-folder-button">Create Folder</button>
+        <button
+          type="submit"
+          id="add-folder-button"
+          class="create-subfolder-button"
+        >
+          Create Subfolder
+        </button>
       </form>
     </section>
 
