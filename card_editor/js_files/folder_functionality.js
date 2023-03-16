@@ -6,7 +6,7 @@ const createFolderField = document.querySelector(
 );
 createFolderCross.addEventListener("click", (event) => {
   formSection.style.visibility = "hidden";
-  plusSign.style.visibility = "visible";
+  folderPlusSign.style.visibility = "visible";
   mainSection.style.opacity = 1;
   mainWordingSection.style.visibility = "visible";
 });
@@ -94,7 +94,7 @@ addButton.addEventListener("mouseup", (event) => {
   );
 
   formSection.style.visibility = "hidden";
-  plusSign.style.visibility = "visible";
+  folderPlusSign.style.visibility = "visible";
   folderSectionContainer.style.visibility = "visible";
   mainSection.style.opacity = 1;
   mainWordingSection.style.visibility = "hidden";
@@ -108,12 +108,14 @@ addButton.addEventListener("mouseup", (event) => {
 
 //Writing the function to open a folder (basically replacing the whole html)
 
-const subFolderSectionContainer = document.querySelector(
-  ".folder_section--added-subfolders-container"
+const addSubFolderSectionContainer = document.querySelector(
+  ".card_editor--add-indexcard"
 );
 const subFolderTitle = document.querySelector(".added_folder--folder-name");
 const subFolderSubTitle = document.querySelector(".card_editor--sub-title");
 const subFolder = document.querySelector(".folder_section--added-subfolders");
+const addFolderContainer = document.querySelector(".card_editor--add-folder");
+const indexCardImage = document.querySelector(".indexcard_image");
 
 folderSectionContainer.addEventListener("click", (e) => {
   if (e.target.classList.contains("access-button-class")) {
@@ -128,9 +130,9 @@ folderSectionContainer.addEventListener("click", (e) => {
     const randomColor = colorArray[randomIndex];
 
     //update the main card editor's title with the selected folder's name
-    document.querySelector(
-      ".card_editor--main-title"
-    ).innerHTML = `Improving ${folderName}`;
+    document.querySelector(".card_editor--main-title").innerHTML = `Learning ${
+      folderName ? folderName : "something"
+    }!`;
 
     document.querySelector(
       ".folder_section--added-subfolders-container"
@@ -140,5 +142,21 @@ folderSectionContainer.addEventListener("click", (e) => {
 
     subFolderSubTitle.innerHTML =
       "Add, edit and delete your index card stacks here!";
+
+    const addingFolderSection = [folderPlusSign, addFolderContainer];
+    addingFolderSection.forEach((element) => {
+      element.style.visibility = "hidden";
+    });
+    addSubFolderSectionContainer.style.visibility = "visible";
   }
+});
+
+const indexCardPlusSign = document.querySelector(".add-indexcard-plus-sign");
+
+indexCardPlusSign.addEventListener("mouseover", () => {
+  indexCardImage.style.opacity = "1";
+});
+
+indexCardPlusSign.addEventListener("mouseout", () => {
+  indexCardImage.style.opacity = "0.6";
 });

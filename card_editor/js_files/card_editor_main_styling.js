@@ -1,4 +1,4 @@
-const plusSign = document.querySelector(".add-folder-plus-sign");
+const folderPlusSign = document.querySelector(".add-folder-plus-sign");
 const folderImage = document.querySelector(".folder_image");
 const body = document.querySelector("body");
 const door = document.querySelector(".logout__door");
@@ -13,19 +13,14 @@ const folderSection = document.querySelector(".folder_section--added-folders");
 const mainWordingSection = document.querySelector(
   ".folder_section--wording-section"
 );
-const addingOverlay = document.querySelector(".screen-overlay");
 const imagesClickable = document.querySelectorAll(".clickable_image");
 
-plusSign.addEventListener("mouseover", () => {
-  imagesClickable.forEach((img) => {
-    img.style.opacity = "1";
-  });
+folderPlusSign.addEventListener("mouseover", () => {
+  folderImage.style.opacity = "1";
 });
 
-plusSign.addEventListener("mouseout", () => {
-  imagesClickable.forEach((img) => {
-    img.style.opacity = "0.6";
-  });
+folderPlusSign.addEventListener("mouseout", () => {
+  folderImage.style.opacity = "0.6";
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -38,13 +33,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 1000);
 });
 
-plusSign.addEventListener("click", () => {
+folderPlusSign.addEventListener("click", () => {
   mainSection.style.opacity = "0";
   mainSection.style.transition = "opacity ease-in-out";
   formSection.style.visibility = "visible";
   formSection.style.opacity = 1;
   formSection.style.transition = "opacity 0.6s ease-in-out";
-  plusSign.style.visibility = "hidden";
+  folderPlusSign.style.visibility = "hidden";
   pointingArrow.style.backgroundColor = "transparent";
   addingOverlay.style.visibility = "visible";
 });
