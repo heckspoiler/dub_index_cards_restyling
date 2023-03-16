@@ -554,11 +554,13 @@ font-family: "Rubik Mono One", sans-serif;*/
   right: 0;
   bottom: 0;
   margin: auto;
-  z-index: 1;
+  z-index: 10000;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 2px solid black;
+  visibility: hidden;
+  opacity: 1;
 }
 
 .index_cards_creating_subfolder_form {

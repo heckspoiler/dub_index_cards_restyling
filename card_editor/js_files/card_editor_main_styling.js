@@ -41,7 +41,6 @@ folderPlusSign.addEventListener("click", () => {
   formSection.style.transition = "opacity 0.6s ease-in-out";
   folderPlusSign.style.visibility = "hidden";
   pointingArrow.style.backgroundColor = "transparent";
-  addingOverlay.style.visibility = "visible";
 });
 
 if (folderSection.innerHTML === "") {
