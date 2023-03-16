@@ -1,4 +1,4 @@
-const plusSign = document.querySelector(".add-folder-p");
+const plusSign = document.querySelector(".add-folder-plus-sign");
 const folderImage = document.querySelector(".folder_image");
 const body = document.querySelector("body");
 const door = document.querySelector(".logout__door");

@@ -89,7 +89,7 @@ font-family: 'Press Start 2P', cursive;*/
   background-color: red;
 }
 
-/* add folder section */
+/* add folder section / add subfolder section */
 
 .clickable-adding-section {
   position: absolute;
@@ -111,7 +111,7 @@ font-family: 'Press Start 2P', cursive;*/
   transition: opacity 0.1s ease-in;
 }
 
-/* arrow styling */
+/* yellow blob styling */
 
 .pointing_arrow {
   position: absolute;
@@ -155,7 +155,7 @@ font-family: 'Press Start 2P', cursive;*/
   }
 }
 
-.add-folder-p {
+.add-folder-plus-sign {
   position: absolute;
   background-color: transparent;
   font-size: 4rem;
@@ -172,15 +172,12 @@ font-family: 'Press Start 2P', cursive;*/
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
   opacity: 0.6;
-}
-
-.add-folder-p:hover,
-.add-folder-p:active {
-  opacity: 1;
-}
-
-.add-folder-p {
   cursor: pointer;
+}
+
+.add-folder-plus-sign:hover,
+.add-folder-plus-sign:active {
+  opacity: 1;
 }
 
 /* folder section */
