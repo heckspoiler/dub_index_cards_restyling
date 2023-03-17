@@ -33,6 +33,10 @@
 .subfolder-title {
   font-family: "Rubik Mono One", sans-serif;
   margin-top: 2rem;
+  font-size: 1.3rem;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  color: white;
 }
 
 .subfolder-span-container {
