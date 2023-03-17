@@ -127,10 +127,12 @@ const subFolderForm = document.querySelector(
 );
 const subFolderNameInput = document.querySelector("#subfolder-name");
 const subFolderContainer = document.querySelector(
-  ".folder_section--added-folders-container"
+  ".folder_section--added-subfolders-container"
 );
 
-console.log(subFolderNameInput);
+// const elementsToHide = folderSectionContainer.querySelectorAll(
+//   ":not(.card_editor--add-indexcard)"
+// );
 
 folderSectionContainer.addEventListener("click", (e) => {
   if (e.target.classList.contains("access-button-class")) {
@@ -141,19 +143,10 @@ folderSectionContainer.addEventListener("click", (e) => {
       ).textContent
     }`;
 
-    const randomIndex = Math.floor(Math.random() * colorArray.length);
-    const randomColor = colorArray[randomIndex];
-
     //update the main card editor's title with the selected folder's name
     document.querySelector(".card_editor--main-title").innerHTML = `Learning ${
       folderName ? folderName : "something"
     }!`;
-
-    document.querySelector(
-      ".folder_section--added-subfolders-container"
-    ).style.visibility = "visible";
-
-    subFolder.style.background = randomColor;
 
     subFolderSubTitle.innerHTML =
       "Add, edit and delete your index card stacks here!";
@@ -163,6 +156,7 @@ folderSectionContainer.addEventListener("click", (e) => {
       element.style.visibility = "hidden";
     });
     addSubFolderSectionContainer.style.visibility = "visible";
+    folderSectionContainer.style.visibility = "hidden";
   }
 });
 
@@ -202,64 +196,26 @@ const addSubFolderButton = document.querySelector(".create-subfolder-button");
 
 addSubFolderButton.addEventListener("click", (e) => {
   e.preventDefault();
+  const randomIndex = Math.floor(Math.random() * colorArray.length);
+  const randomColor = colorArray[randomIndex];
+  subFolderContainer.style.visibility = "visible";
+  folderSectionContainer.style.visibility = "hidden";
+
   newSubFolder = new SubFolder(subFolderNameInput.value.toUpperCase());
+
+  const subFolderDivInnerHTML = `<h3 class="folder_section--added-subfolders-title subfolder-title">${newSubFolder.subFolderName}</h3> <div class="subfolder-span-container"> <div class="subfolder-span">Number of Index Cards</div> <div class="subfolder-span">Description of Content</div> </div> <div class="subfolder-button-container"> <button class="subfolder-button subfolder-button-learn">Learn</button> <button class="subfolder-button subfolder-button-edit">Edit</button> <button class="subfolder-button subfolder-button-delete"> Delete </button> </div>`;
+
   const subFolderDiv = document.createElement("div");
   subFolderDiv.className = "folder_section--added-subfolders";
-  // subFolderDiv.style.background = `${randomColor}`;
-  subFolderDiv.innerHTML = `<h3 class="folder_section--added-subfolders-title subfolder-title">
-  ${newSubFolder.subFolderName}
-</h3>
-<div class="subfolder-span-container">
-  <div class="subfolder-span">Number of Index Cards</div>
-  <div class="subfolder-span">Description of Content</div>
-</div>
-<div class="subfolder-button-container">
-  <button class="subfolder-button subfolder-button-learn">Learn</button>
-  <button class="subfolder-button subfolder-button-edit">Edit</button>
-  <button class="subfolder-button subfolder-button-delete">
-    Delete
-  </button>
-</div>`;
-  subFolderContainer.insertBefore(
-    subFolderDiv,
-    subFolderContainer.firstElementChild
-  );
+  subFolderDiv.innerHTML = subFolderDivInnerHTML;
+
+  subFolderContainer.appendChild(subFolderDiv);
+  // clear input field
+  subFolderDiv.style.background = `${randomColor}`;
+  subFolderNameInput.value = "";
+  subFolderForm.style.visibility = "hidden";
+  subFolderForm.style.opacity = "0";
+  document.querySelector(".card_editor--main-title").style.visibility =
+    "visible";
+  subFolderSubTitle.style.visibility = "visible";
 });
-
-// const folderDiv = document.createElement("div");
-//   folderDiv.className = "added_folder--div";
-//   folderDiv.style.background = `${randomColor}`;
-//   folderDiv.innerHTML = `
-//   <img
-//   src="../icons_and_images/folderPix.png"
-//   class="added_folder--img"
-//   alt="Image of an added Folder"
-// />
-// <div class="added_folder--paragraph-container">
-//   <p class="added_folder--folder-name">${newFolder.folderName}</p>
-//   <p class="added_folder--created">created: ${newFolder.created}</p>
-//   <p class="added_folder--tags">${newFolder.tags}</p>
-//   <div class="added_folder--buttons">
-//     <button id="access-button" class="access-button-class">Access</button
-//     ><button id="delete-button" class="delete-button-class">Delete</button>
-//   </div>
-// </div>
-//   `;
-//   folderSectionContainer.insertBefore(
-//     folderDiv,
-//     folderSectionContainer.firstElementChild
-//   );
-
-// newFolder = new Folder( //Assigning the value here instead of const makes it possible for other elements outside the function to access its values.
-// folderNameInput.value.toUpperCase(),
-// formattedDate,
-// tagsInput.value.toLowerCase()
-// );
-
-// class SubFolder {
-//   constructor(folderName, amountCards, content) {
-//     this.folderName = folderName;
-//     this.amountCards = amountCards;
-//     this.content = content;
-//   }
-// }
