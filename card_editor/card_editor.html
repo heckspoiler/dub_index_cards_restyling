@@ -131,9 +131,38 @@
       <div class="text-container">
         <p class="text">What kind of Index Card would you like to add?</p>
       </div>
-      <div class="box box-1 left"></div>
-      <div class="box box-2 right"></div>
-      <div class="box box-3 top"></div>
+      <div class="box box-1 left single-word-form-container">
+        <form class="single-word-form">
+          <label
+            for="single-word-question-field"
+            class="single-word-question-label"
+            >Add your Question here!</label
+          >
+          <input
+            type="text"
+            id="single-word-question-field"
+            class="single-word-question-fieid"
+            name="single-word-question-field"
+            maxlength="240"
+            required
+          />
+
+          <label for="single-word-answer-field" class="single-word-answer-label"
+            >Add your Answer here!</label
+          >
+          <input
+            type="text"
+            id="single-word-answer-field"
+            class="single-word-answer-fieid"
+            name="single-word-answer-field"
+            maxlength="240"
+            required
+          />
+          <button type="submit">Add Indexcard!</button>
+        </form>
+      </div>
+      <div class="box box-2 right multiple-choice-answer-form"></div>
+      <div class="box box-3 top open-format-answer-form"></div>
     </section>
 
     <a href="../landing_page/landing_page.html"

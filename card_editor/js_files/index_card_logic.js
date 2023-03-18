@@ -30,16 +30,34 @@ buttonTop.addEventListener("click", () => {
   boxTop.classList.toggle("margin-top-100");
   text.classList.toggle("text-margin-top-minus-10rem");
   text.classList.toggle("text-margin-top-10rem");
-  console.log(buttons);
 });
 
 const buttonArray = [buttonTop, buttonLeft, buttonRight];
 
-buttonArray.forEach((button) => {
-  button.addEventListener("click", () => {
-    // Define anonymous function to execute when button is clicked
-    // Toggle the class name using classList.toggle()
-    button.classList.toggle("button-lower");
-    buttonContainer.classList.toggle("button-container-lower");
+function handleClick(event) {
+  const clickedButton = event.target;
+  console.log(clickedButton);
+
+  buttonArray.forEach((button) => {
+    if (button !== clickedButton) {
+      button.style.visibility =
+        button.style.visibility === "hidden" ? "" : "hidden";
+    }
+
+    clickedButton.classList.toggle("button-lower-clicked");
+    if (button.hasAttribute("data-original-innerhtml")) {
+      button.innerHTML = button.getAttribute("data-original-innerhtml");
+
+      button.removeAttribute("data-original-innerhtml");
+    } else {
+      button.setAttribute("data-original-innerhtml", button.innerHTML);
+
+      button.innerHTML = "Back";
+    }
   });
+
+  buttonContainer.classList.toggle("button-container-lower");
+}
+buttonArray.forEach((button) => {
+  button.addEventListener("click", handleClick);
 });
