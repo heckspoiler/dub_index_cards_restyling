@@ -139,14 +139,14 @@
               class="single-word-question-label form-label"
               >Add your Question here!</label
             >
-            <input
+            <textarea
               type="text"
               id="single-word-question-field"
               class="single-word-question-fieid"
               name="single-word-question-field"
               maxlength="240"
               required
-            />
+            ></textarea>
           </div>
 
           <div class="single-word-answer-container">
@@ -155,17 +155,19 @@
               class="single-word-answer-label form-label"
               >Add your Answer here!</label
             >
-            <input
+            <textarea
               type="text"
               id="single-word-answer-field"
-              class="single-word-answer-fieid"
+              class="single-word-answer-field"
               name="single-word-answer-field"
               maxlength="240"
               required
-            />
+            ></textarea>
           </div>
 
-          <button type="submit">Add Indexcard!</button>
+          <button type="submit" class="add-indexcard-button">
+            Add Indexcard!
+          </button>
         </form>
       </div>
       <div class="box box-2 right multiple-choice-answer-form"></div>

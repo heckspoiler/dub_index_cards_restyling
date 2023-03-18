@@ -120,6 +120,7 @@ font-family: "Rubik Mono One", sans-serif;*/
   background-color: white;
   position: absolute;
   z-index: 10000;
+  overflow: hidden;
 }
 
 .box {
@@ -174,8 +175,8 @@ font-family: "Rubik Mono One", sans-serif;*/
 
 .button-lower-clicked {
   font-size: 0.9rem;
-  height: 3rem;
-  width: 6rem;
+  height: 2rem;
+  width: 4rem;
   background-color: white;
 }
 
@@ -278,6 +279,7 @@ font-family: "Rubik Mono One", sans-serif;*/
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  width: 80%;
 }
 
 .single-word-form {
@@ -291,9 +293,30 @@ font-family: "Rubik Mono One", sans-serif;*/
   gap: 5rem;
 }
 
-.single-word-question-fieid {
+.single-word-question-fieid,
+.single-word-answer-field {
   height: 4rem;
-  max-width: 90%;
+  max-width: 100%;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
+  padding-top: 8px;
+}
+
+.add-indexcard-button {
+  height: 5rem;
+  width: 10rem;
+  border: 1px solid black;
+  transition: box-shadow 0.1s ease-in-out, background-color 0.1s ease-in-out,
+    font-size 0.1s ease-in-out, height 0.1s ease-in-out, width 0.1s ease-in-out;
+  background-color: transparent;
+  font-size: 1.1rem;
+  font-family: "Abel", sans-serif;
+  background-color: rgba(121, 159, 217, 0.8);
+}
+
+.add-indexcard-button:hover {
+  box-shadow: 3px 3px 0.5px black;
+  background-color: rgba(121, 159, 217, 1);
+  cursor: crosshair;
+  z-index: 10000;
 }
