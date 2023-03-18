@@ -6,45 +6,40 @@
 
 // add index card type pop up
 
-const buttonLeft = document.querySelector(".single-answer");
-const buttonRight = document.querySelector(".multiple-choice-answer");
-const buttonTop = document.querySelector(".open-format-answer");
+const buttonLeft = document.querySelector(".button-left");
+const buttonRight = document.querySelector(".button-right");
+const buttonTop = document.querySelector(".button-top");
+const buttonContainer = document.querySelector(".button-container");
+const buttons = document.querySelectorAll(".button");
 const boxLeft = document.querySelector(".left");
 const boxRight = document.querySelector(".right");
 const boxTop = document.querySelector(".top");
-const text = document.querySelector(".text");
+const text = document.querySelector(".text-container");
 
 buttonLeft.addEventListener("click", () => {
-  if (boxLeft.style.marginLeft === "100%") {
-    boxLeft.style.marginLeft = "0%";
-    boxLeft.style.opacity = 1;
-    text.style.marginLeft = "-1000px";
-  } else {
-    boxLeft.style.marginLeft = "100%";
-    text.style.marginLeft = "0px";
-  }
+  boxLeft.classList.toggle("margin-left-100");
+  text.classList.toggle("text-margin-left-minus-1000");
 });
 
 buttonRight.addEventListener("click", () => {
-  if (boxRight.style.marginRight === "100%") {
-    boxRight.style.marginRight = "0%";
-    boxRight.style.opacity = 1;
-    text.style.marginLeft = "1200px";
-  } else {
-    boxRight.style.marginRight = "100%";
-    text.style.marginLeft = "0px";
-  }
+  boxRight.classList.toggle("margin-right-100");
+  text.classList.toggle("text-margin-left-1200");
 });
 
 buttonTop.addEventListener("click", () => {
-  if (boxTop.style.marginTop === "100%") {
-    boxTop.style.marginTop = "0%";
-    boxTop.style.opacity = 1;
-    text.style.marginTop = "-10rem";
-  } else {
-    boxTop.style.marginTop = "100%";
-    text.style.marginTop = " 10rem";
-  }
+  boxTop.classList.toggle("margin-top-100");
+  text.classList.toggle("text-margin-top-minus-10rem");
+  text.classList.toggle("text-margin-top-10rem");
+  console.log(buttons);
+});
 
-  console.log(buttonTop);
+const buttonArray = [buttonTop, buttonLeft, buttonRight];
+
+buttonArray.forEach((button) => {
+  button.addEventListener("click", () => {
+    // Define anonymous function to execute when button is clicked
+    // Toggle the class name using classList.toggle()
+    button.classList.toggle("button-lower");
+    buttonContainer.classList.toggle("button-container-lower");
+  });
 });
