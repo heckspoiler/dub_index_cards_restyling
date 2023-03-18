@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Card Editor</title>
-    <link rel="stylesheet" href="./card_editor.css" />
+    <link rel="stylesheet" href="../card_editor/css_files/card_editor.css" />
     <link rel="stylesheet" href="../general-files/general_styles.css" />
     <link rel="stylesheet" href="./css_files/icon_styling.css" />
     <link rel="stylesheet" href="./css_files/subfolder_styling.css" />
@@ -31,6 +31,7 @@
       type="module"
       defer
     ></script>
+    <script src="./js_files/index_card_logic.js" defer></script>
   </head>
   <body>
     <img
@@ -123,9 +124,13 @@
         <button class="button button-right multiple-choice-answer">
           Multiple Choice Answer
         </button>
-        <button class="button button-top">Open Format Answer</button>
+        <button class="button button-top open-format-answer">
+          Open Format Answer
+        </button>
       </div>
-      <p class="text">THERE IS SOME CONTENT HERE AS WELL</p>
+      <div class="text-container">
+        <p class="text">What kind of Index Card would you like to add?</p>
+      </div>
       <div class="box box-1 left"></div>
       <div class="box box-2 right"></div>
       <div class="box box-3 top"></div>

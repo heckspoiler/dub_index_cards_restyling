@@ -106,8 +106,8 @@ font-family: "Rubik Mono One", sans-serif;*/
 /* index card type choice field */
 
 .container {
-  height: 600px;
-  width: 600px;
+  height: 40rem;
+  width: 40rem;
   border: 1px solid black;
   left: 0;
   right: 0;
@@ -124,8 +124,8 @@ font-family: "Rubik Mono One", sans-serif;*/
 }
 
 .box {
-  height: 600px;
-  width: 600px;
+  height: 40rem;
+  width: 40rem;
   position: absolute;
   left: 0;
   right: 0;
@@ -142,7 +142,6 @@ font-family: "Rubik Mono One", sans-serif;*/
   position: absolute;
   height: 5rem;
   width: 100%;
-  margin-top: 510px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -152,6 +151,7 @@ font-family: "Rubik Mono One", sans-serif;*/
   margin-right: auto;
   align-items: center;
   z-index: 100;
+  margin-top: 25rem;
 }
 
 .button {
@@ -162,17 +162,18 @@ font-family: "Rubik Mono One", sans-serif;*/
   background-color: transparent;
   font-size: 1.2rem;
   font-family: "Abel", sans-serif;
-  margin-bottom: 5rem;
+
+  background-color: rgba(121, 159, 217, 0.8);
 }
 
 .button:hover {
   box-shadow: 3px 3px 0.5px black;
-  background-color: lightgreen;
+  background-color: rgba(121, 159, 217, 1);
   cursor: crosshair;
 }
 
 .left {
-  background-color: rgb(192, 229, 200);
+  background-color: red;
   margin-left: 100%;
   transform: translateX(0%);
   transition: margin-left 0.2s ease-in-out;
@@ -181,7 +182,7 @@ font-family: "Rubik Mono One", sans-serif;*/
 }
 
 .right {
-  background-color: rgb(231, 215, 193);
+  background-color: red;
   margin-right: 100%;
   transform: translateX(0%);
   transition: margin-right 0.2s ease-in-out;
@@ -198,13 +199,26 @@ font-family: "Rubik Mono One", sans-serif;*/
 
 .text {
   position: absolute;
-  font-size: 4rem;
-  top: 0;
-  bottom: 0;
-  margin-top: auto;
-  margin-bottom: auto;
+  font-size: 2rem;
   transition: all 0.4s ease-in-out;
   z-index: 8;
-  width: 100%;
+  font-family: "Rubik Mono One", sans-serif;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  height: 30%;
+  width: 90%;
+  margin-top: 10rem;
+  color: white;
+  text-align: center;
+}
+
+.text-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
   height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background-color: #d0ebce;
 }
