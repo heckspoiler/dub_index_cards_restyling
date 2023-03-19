@@ -285,14 +285,17 @@ font-family: "Rubik Mono One", sans-serif;*/
   font-size: 1.5rem;
 }
 .single-word-question-container,
-.single-word-answer-container {
+.single-word-answer-container,
+.open-format-question-container,
+.open-format-answer-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   width: 80%;
 }
 
-.single-word-form {
+.single-word-form,
+.open-format-form {
   height: 100%;
   width: 100%;
   display: flex;
@@ -304,7 +307,9 @@ font-family: "Rubik Mono One", sans-serif;*/
 }
 
 .single-word-question-fieid,
-.single-word-answer-field {
+.single-word-answer-field,
+.open-format-question-fieid,
+.open-format-answer-field {
   height: 4rem;
   max-width: 100%;
   padding-left: 10px;
@@ -369,6 +374,12 @@ font-family: "Rubik Mono One", sans-serif;*/
   gap: 1rem;
 }
 
+.multiple-choice-question-field {
+  padding-left: 10px;
+  padding-top: 4px;
+  font-size: 0.8rem;
+}
+
 .multiple-choice-list-object {
   display: flex;
   width: 100%;
@@ -379,7 +390,6 @@ font-family: "Rubik Mono One", sans-serif;*/
 
 .multiple-choice-list-texfield {
   width: 60%;
-  font-family: sans-serif;
   padding-left: 10px;
   padding-top: 4px;
   font-size: 0.8rem;

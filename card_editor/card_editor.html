@@ -152,6 +152,7 @@
               name="single-word-question-field"
               maxlength="240"
               required
+              placeholder="Add a word that has to be translated, a question that refers to a buzzword from your chemistry class, or whatevery question that could be answered in one word..."
             ></textarea>
           </div>
 
@@ -167,6 +168,7 @@
               class="single-word-answer-field"
               name="single-word-answer-field"
               maxlength="240"
+              placeholder="Just one word! Or a sentence. Don't forget, with this format you have to type!"
               required
             ></textarea>
           </div>
@@ -187,7 +189,7 @@
             <textarea
               type="text"
               id="multiple-choice-question-field"
-              class="multiple-choice-question-fieid"
+              class="multiple-choice-question-field"
               name="multiple-choice-question-field"
               maxlength="240"
               required
@@ -243,7 +245,47 @@
           </button>
         </form>
       </div>
-      <div class="box box-3 top open-format-answer-form"></div>
+      <div class="box box-3 top open-format-answer-form">
+        <form class="open-format-form">
+          <div class="open-format-question-container">
+            <label
+              for="open-format-question-field"
+              class="single-word-question-label form-label"
+              >Add your Question here!</label
+            >
+            <textarea
+              type="text"
+              id="open-format-question-field"
+              class="open-format-question-fieid"
+              name="open-format-question-field"
+              maxlength="240"
+              placeholder="Any open format question you like! For example: why are bricks energy efficient?"
+              required
+            ></textarea>
+          </div>
+
+          <div class="open-format-answer-container">
+            <label
+              for="open-format-answer-field"
+              class="open-format-answer-label form-label"
+              >Add your Answer here!</label
+            >
+            <textarea
+              type="text"
+              id="open-format-answer-field"
+              class="open-format-answer-field"
+              name="open-format-answer-field"
+              maxlength="240"
+              placeholder="Bricks are energy efficient because they hold sunlight throughout the day and release that energy after the sun goes down... Do as you please!"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="add-indexcard-button">
+            Add Indexcard!
+          </button>
+        </form>
+      </div>
     </section>
 
     <a href="../landing_page/landing_page.html"
