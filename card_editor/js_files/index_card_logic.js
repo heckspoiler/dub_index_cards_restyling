@@ -80,3 +80,29 @@ function handleClick(event) {
 buttonArray.forEach((button) => {
   button.addEventListener("click", handleClick);
 });
+
+//pop up button handling
+
+// edit --> add indexcard button
+
+let indexCardsArray = [];
+let singleAnswerCards = [];
+let multipleChoiceCards = [];
+let openFormatCards = [];
+
+const singleChoiceButton = document.getElementById(
+  "add-single-choice-indexcard-button"
+);
+const multipleChoiceButton = document.getElementById(
+  "add-multiple-choice-indexcard-button"
+);
+
+const openFormatButton = document.getElementById(
+  "add-open-format-indexcard-button"
+);
+
+class IndexCard {
+  constructor(question, answer, type) {
+    (this.question = question), (this.answer = answer), (this.type = type);
+  }
+}

@@ -115,7 +115,7 @@ font-family: "Rubik Mono One", sans-serif;*/
 /* index card type choice field */
 
 .container {
-  visibility: hidden;
+  visibility: visible;
   height: 40rem;
   width: 40rem;
   border: 1px solid black;
@@ -127,7 +127,7 @@ font-family: "Rubik Mono One", sans-serif;*/
   margin-right: auto;
   margin-top: auto;
   margin-bottom: auto;
-  background-color: white;
+  background-color: #d0ebce;
   position: absolute;
   z-index: 10000;
   overflow: hidden;
@@ -167,15 +167,15 @@ font-family: "Rubik Mono One", sans-serif;*/
   align-items: center;
   z-index: 100;
   margin-top: 25rem;
-  transition: margin-top 0.1s ease-in-out;
+  transition: margin-top 0.2s ease-in-out;
 }
 
 .button {
   height: 5rem;
   width: 10rem;
   border: 1px solid black;
-  transition: box-shadow 0.1s ease-in-out, background-color 0.1s ease-in-out,
-    font-size 0.1s ease-in-out, height 0.1s ease-in-out, width 0.1s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out,
+    font-size 0.2s ease-in-out, height 0.2s ease-in-out, width 0.2s ease-in-out;
   background-color: transparent;
   font-size: 1.1rem;
   font-family: "Abel", sans-serif;
@@ -246,8 +246,8 @@ font-family: "Rubik Mono One", sans-serif;*/
   top: 0;
   bottom: 0;
   background-color: #d0ebce;
-  transition: margin-left 0.2s ease-in-out, margin-right 0.2s ease-in-out,
-    margin-top 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transition: margin-left 0.4s ease-in-out, margin-right 0.4s ease-in-out,
+    margin-top 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
 
 .margin-left-100 {
