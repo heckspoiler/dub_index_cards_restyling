@@ -166,8 +166,8 @@ font-family: "Rubik Mono One", sans-serif;*/
   margin-right: auto;
   align-items: center;
   z-index: 100;
-  margin-top: 25rem;
-  transition: margin-top 0.2s ease-in-out;
+  margin-top: 27rem;
+  transition: margin-top 0.4s ease-in-out;
 }
 
 .button {
@@ -207,18 +207,18 @@ font-family: "Rubik Mono One", sans-serif;*/
 .left {
   margin-left: 100%;
   transform: translateX(0%);
-  transition: margin-left 0.2s ease-in-out;
+  transition: margin-left 0.4s ease-in-out;
 }
 
 .right {
   margin-right: 100%;
   transform: translateX(0%);
-  transition: margin-right 0.2s ease-in-out;
+  transition: margin-right 0.4s ease-in-out;
 }
 
 .top {
   margin-top: 100%;
-  transition: margin-top 0.2s ease-in-out;
+  transition: margin-top 0.4s ease-in-out;
 }
 
 .text {

@@ -83,9 +83,9 @@ buttonArray.forEach((button) => {
 
 //pop up button handling
 
-// edit --> add indexcard button
+// edit --> add indexcards button
 
-let indexCardsArray = [];
+export let indexCardsArray = [];
 let singleAnswerCards = [];
 let multipleChoiceCards = [];
 let openFormatCards = [];
@@ -106,3 +106,23 @@ class IndexCard {
     (this.question = question), (this.answer = answer), (this.type = type);
   }
 }
+
+singleChoiceButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  const questionInput = document.getElementById("single-word-question-field");
+  const answerInput = document.getElementById("single-word-answer-field");
+  const type = document.getElementById("single-word-question");
+
+  const singleAnswerCard = new IndexCard(
+    questionInput.value,
+    answerInput.value,
+    type.value
+  );
+
+  singleAnswerCards.push(singleAnswerCard);
+  indexCardsArray.push(singleAnswerCard);
+
+  // Clear form fields
+  questionInput.value = "";
+  answerInput.value = "";
+});

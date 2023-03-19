@@ -1,3 +1,4 @@
+import { indexCardsArray } from "./index_card_logic";
 // hover cross
 const backgroundSvg = document.querySelector(".folder_section--bg-svg");
 const createFolderCross = document.querySelector(".cross");
@@ -203,7 +204,7 @@ addSubFolderButton.addEventListener("click", (e) => {
 
   newSubFolder = new SubFolder(subFolderNameInput.value.toUpperCase());
 
-  const subFolderDivInnerHTML = `<h3 class="folder_section--added-subfolders-title subfolder-title">${newSubFolder.subFolderName}</h3> <div class="subfolder-span-container"> <div class="subfolder-span">Number of Index Cards</div> <div class="subfolder-span">Description of Content</div> </div> <div class="subfolder-button-container"> <button class="subfolder-button subfolder-button-learn">Learn</button> <button class="subfolder-button subfolder-button-edit">Edit</button> <button class="subfolder-button subfolder-button-delete"> Delete </button> </div>`;
+  const subFolderDivInnerHTML = `<h3 class="folder_section--added-subfolders-title subfolder-title">${newSubFolder.subFolderName}</h3> <div class="subfolder-span-container"> <div class="subfolder-span" id="number-of-index-cards">${indexCardsArray.length}</div> <div class="subfolder-span">Description of Content</div> </div> <div class="subfolder-button-container"> <button class="subfolder-button subfolder-button-learn">Learn</button> <button class="subfolder-button subfolder-button-edit">Edit</button> <button class="subfolder-button subfolder-button-delete"> Delete </button> </div>`;
 
   const subFolderDiv = document.createElement("div");
   subFolderDiv.className = "folder_section--added-subfolders";
