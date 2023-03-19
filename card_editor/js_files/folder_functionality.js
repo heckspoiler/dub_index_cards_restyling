@@ -126,7 +126,7 @@ const subFolderForm = document.querySelector(
   ".index_cards_creating_subfolder_container"
 );
 const subFolderNameInput = document.querySelector("#subfolder-name");
-const subFolderContainer = document.querySelector(
+export const subFolderContainer = document.querySelector(
   ".folder_section--added-subfolders-container"
 );
 
@@ -219,3 +219,5 @@ addSubFolderButton.addEventListener("click", (e) => {
     "visible";
   subFolderSubTitle.style.visibility = "visible";
 });
+
+// defining functionality for edit button within the subfolder

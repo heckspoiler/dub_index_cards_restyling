@@ -1,8 +1,25 @@
-// edit button section
+import { subFolderContainer } from "./folder_functionality.js";
 
-// learn button section
+// edit button
 
-// delete button section
+const choiceFieldContainer = document.querySelector(".container");
+const choiceFieldCross = document.querySelector(".cross-container");
+
+choiceFieldCross.addEventListener("click", () => {
+  choiceFieldContainer.style.visibility = "hidden";
+});
+const editButtonClickEvent = subFolderContainer.addEventListener(
+  "click",
+  (event) => {
+    if (event.target.classList.contains("subfolder-button-edit")) {
+      choiceFieldContainer.style.visibility = "visible";
+    }
+  }
+);
+
+// learn button
+
+// delete button
 
 // add index card type pop up
 
