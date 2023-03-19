@@ -40,8 +40,6 @@ body {
 .landing__page {
   font-family: "Rubik Mono One", sans-serif;
   font-size: 1.2rem;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
   color: white;
   display: flex;
   height: 100vh;
@@ -59,6 +57,8 @@ body {
   animation-delay: 0.4s;
   color: rgb(75, 155, 155);
   top: -1000px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 @keyframes slide-in {
@@ -220,6 +220,9 @@ body {
   background-size: 18px 18px;
   width: 60%;
   height: 10rem;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  border-radius: 10px;
 }
 .landing__page--intro--text::before {
   content: "";
@@ -274,38 +277,33 @@ body {
   height: 6vh;
   border-radius: 5px;
   font-size: 1.2rem;
-  border: 4px solid black;
 }
 
 .landing__page--login--button {
   background-color: #cfebcc;
   border-radius: 0;
-  border: 4px solid #79a475;
+  border: 1px solid black;
   transition: all 0.2s ease-in-out;
-  letter-spacing: 8px;
 }
 
 .landing__page--signup--button {
-  background-color: rgba(121, 159, 217, 0.6);
-  border: 4px solid rgba(89, 113, 149, 0.6);
+  background-color: rgba(121, 159, 217, 0.9);
+  border: 1px solid black;
   border-radius: 0;
   transition: all 0.2s ease-in-out;
-  letter-spacing: 8px;
 }
 
 .landing__page--login--button:hover {
   opacity: 100%;
   cursor: pointer;
-  box-shadow: 6px 10px 1px black;
-  letter-spacing: 11px;
+  box-shadow: 4px 4px 1px black;
 }
 
 .landing__page--signup--button:hover {
-  background-color: rgba(121, 159, 217, 1);
+  background-color: rgb(99, 136, 191);
   cursor: pointer;
-  box-shadow: 6px 10px 1px black;
+  box-shadow: 4px 4px 1px black;
   opacity: 1;
-  letter-spacing: 11px;
 }
 
 .landing__page--button--icons {
@@ -314,6 +312,8 @@ body {
   font-size: 2.5em;
   gap: 7vw;
   margin-top: 4vh;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 .fa-facebook {
@@ -383,14 +383,13 @@ body {
   align-items: center;
   justify-content: center;
   position: absolute;
-  background-color: #3885ad;
-  border: 4px solid black;
+  background-color: #79b1d0;
+  border: 1px solid black;
   height: 80vh;
   width: 70vw;
   opacity: 1;
   margin-top: auto;
   margin-left: auto;
-  box-shadow: 8px 8px 2px black;
 }
 
 .landing__page--login--section--visible {
@@ -399,23 +398,28 @@ body {
 }
 
 .landing__page--login--section h2 {
-  font-family: "Press Start 2P", cursive;
+  font-family: "Rubik Mono One", sans-serif;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
   color: white;
   text-align: center;
   width: 40vw;
   line-height: 2em;
   margin-top: -5vh;
   margin-bottom: 5vh;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .landing__page--login--section label {
   font-size: 0.9rem;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 .landing__page--login--section input {
   border: 2px solid black;
   padding-left: 10px;
+  font-family: sans-serif !important;
 }
 
 .login_section--form {
@@ -429,6 +433,7 @@ body {
 
 .login_section--form button {
   width: 60%;
+  letter-spacing: none;
 }
 
 .show__password--section label {
@@ -442,30 +447,27 @@ body {
 #username {
   font-family: "Abel", sans-serif;
   background-color: white;
-  border: white;
   height: 4vh;
   padding-left: 10px;
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
 #password {
   font-family: "Abel", sans-serif;
   background-color: white;
-  border: white;
+
   height: 4vh;
   padding-left: 15px;
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
 .log__in--button {
   background-color: #cfebcc;
-  border: 4px solid #79a475;
+  border: 1px solid black;
   height: 5vh;
   font-family: "Abel", sans-serif;
-  color: white;
   font-size: 1.2rem;
   cursor: pointer;
-  letter-spacing: 8px;
   transition: letter-spacing 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
     background-color 0.2s ease-in-out;
 }
@@ -476,7 +478,7 @@ body {
   align-items: center;
   margin-top: 20px;
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .username__forgotten {
@@ -487,9 +489,11 @@ body {
   color: rgb(244, 242, 242);
   cursor: pointer;
   text-align: center;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, font-size 0.2 ease-in-out;
   text-align: center;
   padding: 0px auto;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 .username__forgotten:hover {
@@ -531,25 +535,28 @@ body {
   margin-top: -15%;
   width: 100%;
 }
+.cross:hover:before,
+.cross:hover:after {
+  background: rgba(255, 0, 0, 0.8);
+}
 
 /* sign up section */
 
 .landing__page--signup--section {
   z-index: 10000;
   visibility: hidden;
-  opacity: 0;
+  opacity: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: absolute;
   background-color: #cfebcc;
-  border: 4px solid black;
+  border: 1px solid black;
   height: 80vh;
   width: 70vw;
   margin-top: auto;
   margin-left: auto;
-  box-shadow: 8px 8px 2px black;
 }
 
 .landing__page--signup--section--visible {
@@ -558,13 +565,15 @@ body {
 }
 
 .landing__page--signup--section h2 {
-  font-family: "Press Start 2P", cursive;
+  font-family: "Rubik Mono One", sans-serif;
   color: white;
   text-align: center;
   width: 40vw;
   line-height: 1.6em;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   margin-top: -40px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 .sign__up--form {
@@ -584,6 +593,7 @@ body {
   width: 100%;
   justify-content: center;
   align-items: center;
+  font-size: 0.9rem;
 }
 
 .sign__up--first-section section,
@@ -591,16 +601,19 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2vh;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 .sign__up--first-section input,
 .sign__up--second-section input {
-  font-family: "Abel", sans-serif;
+  font-family: sans-serif;
   background-color: white;
-  border: 2px solid black;
+  border: 1px solid black;
   height: 5vh;
   width: 20vw;
   padding-left: 20px;
+  -webkit-text-stroke-width: 0;
 }
 
 .sign__up--button {
@@ -611,20 +624,20 @@ body {
   font-family: "Abel", sans-serif;
   font-size: 1.2rem;
   border: 2px solid rgb(81, 115, 167);
-  transition: all 0.2s ease-in-out;
+  transition: letter-spacing 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
+  margin-top: 3rem;
 }
 
 .log__in--button:hover,
 .log__in--button:active {
   background-color: #cfebcc;
-  box-shadow: 6px 10px 1px black;
-  letter-spacing: 11px;
+  box-shadow: 4px 4px 1px black;
 }
 
 .sign__up--button:hover,
 .sign__up--button:active {
-  box-shadow: 6px 10px 1px black;
-  letter-spacing: 4px;
+  box-shadow: 4px 4px 1px black;
 }
 
 @media only screen and (max-width: 480px) {

@@ -106,7 +106,7 @@ font-family: "Rubik Mono One", sans-serif;*/
 /* index card type choice field */
 
 .container {
-  visibility: hidden;
+  /* visibility: hidden; */
   height: 40rem;
   width: 40rem;
   border: 1px solid black;
@@ -171,7 +171,7 @@ font-family: "Rubik Mono One", sans-serif;*/
 }
 
 .button-container-lower {
-  margin-top: 30rem;
+  margin-top: 35rem;
 }
 
 .button-lower-clicked {
