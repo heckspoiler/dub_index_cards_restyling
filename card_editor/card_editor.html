@@ -176,7 +176,73 @@
           </button>
         </form>
       </div>
-      <div class="box box-2 right multiple-choice-answer-form"></div>
+      <div class="box box-2 right multiple-choice-answer-form">
+        <form class="multiple-choice-form">
+          <div class="multiple-choice-question-container">
+            <label
+              for="multiple-choice-question-field"
+              class="multiple-choice-question-label form-label"
+              >Add your Question here!</label
+            >
+            <textarea
+              type="text"
+              id="multiple-choice-question-field"
+              class="multiple-choice-question-fieid"
+              name="multiple-choice-question-field"
+              maxlength="240"
+              required
+            ></textarea>
+          </div>
+
+          <div class="multiple-choice-answer-container">
+            <label
+              for="multiple-choice-answer-field"
+              class="multiple-choice-answer-label form-label"
+              >Add your Answers here!</label
+            >
+            <ul class="multiple-choice-list">
+              <li
+                class="multiple-choice-list-object"
+                id="multiple-choice-answer-1"
+              >
+                <p class="multiple-choice-list-p">Answer 1:</p>
+                <textarea
+                  class="multiple-choice-list-texfield"
+                  placeholder="Your correct answer should be here..."
+                ></textarea>
+              </li>
+              <li
+                class="multiple-choice-list-object"
+                id="multiple-choice-answer-2"
+              >
+                <p class="multiple-choice-list-p">Answer 2:</p>
+                <textarea class="multiple-choice-list-texfield"></textarea>
+              </li>
+              <li
+                class="multiple-choice-list-object"
+                id="multiple-choice-answer-3"
+              >
+                <p class="multiple-choice-list-p">Answer 3:</p>
+                <textarea class="multiple-choice-list-texfield"></textarea>
+              </li>
+              <li
+                class="multiple-choice-list-object"
+                id="multiple-choice-answer-4"
+              >
+                <p class="multiple-choice-list-p">Answer 4:</p>
+                <textarea class="multiple-choice-list-texfield"></textarea>
+              </li>
+            </ul>
+          </div>
+
+          <button
+            type="submit"
+            class="add-indexcard-button multiple-choice-add-button"
+          >
+            Add Indexcard!
+          </button>
+        </form>
+      </div>
       <div class="box box-3 top open-format-answer-form"></div>
     </section>
 
