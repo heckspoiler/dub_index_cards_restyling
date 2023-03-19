@@ -15,6 +15,7 @@ const boxLeft = document.querySelector(".left");
 const boxRight = document.querySelector(".right");
 const boxTop = document.querySelector(".top");
 const text = document.querySelector(".text-container");
+const addSingleAnswerCard = document.querySelector(".add-indexcard-button");
 
 buttonLeft.addEventListener("click", () => {
   boxLeft.classList.toggle("margin-left-100");
@@ -58,6 +59,7 @@ function handleClick(event) {
 
   buttonContainer.classList.toggle("button-container-lower");
 }
+
 buttonArray.forEach((button) => {
   button.addEventListener("click", handleClick);
 });

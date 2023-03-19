@@ -4,6 +4,15 @@ font-family: 'Abel', sans-serif;
 font-family: 'Press Start 2P', cursive;
 font-family: "Rubik Mono One", sans-serif;*/
 
+/* general styling */
+.cross-container {
+  height: 100px;
+  width: 100px;
+  margin-left: 34rem;
+  z-index: 1000000;
+  display: flex;
+}
+
 /* subfolders that get added into folders */
 
 .folder_section--added-subfolders-container {
@@ -106,7 +115,7 @@ font-family: "Rubik Mono One", sans-serif;*/
 /* index card type choice field */
 
 .container {
-  /* visibility: hidden; */
+  visibility: hidden;
   height: 40rem;
   width: 40rem;
   border: 1px solid black;

@@ -547,7 +547,7 @@ font-family: "Rubik Mono One", sans-serif;*/
 .index_cards_creating_subfolder_container {
   height: 30rem;
   width: 40rem;
-  background-color: #5ee7df;
+  background-color: #90d4cf;
   position: absolute;
   left: 0;
   top: 0;
@@ -635,7 +635,7 @@ font-family: "Rubik Mono One", sans-serif;*/
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
 
-  background-color: #5ee7df;
+  background-color: #90d4cf;
   text-align: center;
 }
 
