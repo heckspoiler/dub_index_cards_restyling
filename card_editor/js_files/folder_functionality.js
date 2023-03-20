@@ -163,6 +163,8 @@ export const subFolderContainer = document.querySelector(
 //   ":not(.card_editor--add-indexcard)"
 // );
 
+let activeSubFolderDiv;
+
 folderSectionContainer.addEventListener("click", (e) => {
   if (e.target.classList.contains("access-button-class")) {
     // get the selected folder's name using template literals
@@ -171,6 +173,8 @@ folderSectionContainer.addEventListener("click", (e) => {
         ".added_folder--paragraph-container .added_folder--folder-name"
       ).textContent
     }`;
+
+    activeSubFolderDiv = e.target.parentNode.parentNode.parentNode;
 
     //update the main card editor's title with the selected folder's name
     document.querySelector(".card_editor--main-title").innerHTML = `Learning ${
@@ -232,7 +236,7 @@ addSubFolderButton.addEventListener("click", (e) => {
 
   newSubFolder = new SubFolder(subFolderNameInput.value.toUpperCase());
 
-  const subFolderDivInnerHTML = `<h3 class="folder_section--added-subfolders-title subfolder-title">${newSubFolder.subFolderName}</h3> <div class="subfolder-span-container"> <div class="subfolder-span" id="number-of-index-cards">0 Index Cards</div> <div class="subfolder-span">Description of Content</div> </div> <div class="subfolder-button-container"> <button class="subfolder-button subfolder-button-learn">Learn</button> <button class="subfolder-button subfolder-button-edit">Edit</button> <button class="subfolder-button subfolder-button-delete"> Delete </button> </div>`;
+  const subFolderDivInnerHTML = `<h3 class="folder_section--added-subfolders-title subfolder-title">${newSubFolder.subFolderName}</h3> <div class="subfolder-span-container"> <div class="subfolder-span" id="number-of-index-cards" class="number-of-index-cards-class">0 Index Cards</div> <div class="subfolder-span">Description of Content</div> </div> <div class="subfolder-button-container"> <button class="subfolder-button subfolder-button-learn">Learn</button> <button class="subfolder-button subfolder-button-edit">Edit</button> <button class="subfolder-button subfolder-button-delete"> Delete </button> </div>`;
 
   const subFolderDiv = document.createElement("div");
   subFolderDiv.className = "folder_section--added-subfolders";
@@ -368,7 +372,8 @@ singleChoiceButton.addEventListener("click", (e) => {
   newSubFolder.singleAnswerIndexCards.push(singleAnswerCard);
   newSubFolder.allIndexCards.push(singleAnswerCard);
   document.querySelector(
-    "#number-of-index-cards"
+    ".number-of-index-cards-class",
+    activeSubFolderDiv
   ).innerHTML = `${newSubFolder.allIndexCards.length} Index Cards`;
   choiceFieldContainer.style.visibility = "hidden";
 
@@ -387,15 +392,12 @@ multipleChoiceButton.addEventListener("click", (e) => {
   );
   const answerInput = document.getElementById("multiple-choice-answer-field");
   const type = "multiple-choice-question";
-  const newSubFolder = new SubFolder(
-    type,
-    questionInput.value,
-    answerInput.value
-  );
+  newSubFolder = new SubFolder(type, questionInput.value, answerInput.value);
   newSubFolder.multipleChoiceIndexCards.push(newIndexCard);
   newSubFolder.allIndexCards.push(newIndexCard);
   document.querySelector(
-    "#number-of-index-cards"
+    ".number-of-index-cards-class",
+    activeSubFolderDiv
   ).innerHTML = `${newSubFolder.allIndexCards.length} Index Cards`;
   choiceFieldContainer.style.visibility = "hidden";
   questionInput.value = "";
