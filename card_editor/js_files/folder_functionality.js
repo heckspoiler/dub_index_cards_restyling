@@ -1,4 +1,16 @@
-import { indexCardsArray } from "./index_card_logic";
+// defining variables that will be used later
+
+const singleChoiceButton = document.getElementById(
+  "add-single-answer-indexcard-button"
+);
+const multipleChoiceButton = document.getElementById(
+  "add-multiple-choice-indexcard-button"
+);
+
+const openFormatButton = document.getElementById(
+  "add-open-format-indexcard-button"
+);
+
 // hover cross
 const backgroundSvg = document.querySelector(".folder_section--bg-svg");
 const createFolderCross = document.querySelector(".cross");
@@ -23,6 +35,11 @@ let colorArray = [
   "rgba(220, 254, 217 ,1)",
   "rgba( 254, 221, 217 , 1)",
 ];
+
+let savedIndexCards = JSON.parse(localStorage.getItem("indexCardsArray"));
+if (savedIndexCards) {
+  indexCardsArray = savedIndexCards;
+}
 
 // retrieve the name from localStorage
 const name = localStorage.getItem("name");
@@ -112,6 +129,17 @@ addButton.addEventListener("mouseup", (event) => {
 class SubFolder {
   constructor(subFolderName) {
     this.subFolderName = subFolderName;
+    this.indexCardCount = 0; // initialize the index card count to zero
+  }
+
+  addIndexCard() {
+    this.indexCardCount++; // increment the index card count by one
+  }
+
+  removeIndexCard() {
+    if (this.indexCardCount > 0) {
+      this.indexCardCount--; // decrement the index card count by one
+    }
   }
 }
 
@@ -204,7 +232,7 @@ addSubFolderButton.addEventListener("click", (e) => {
 
   newSubFolder = new SubFolder(subFolderNameInput.value.toUpperCase());
 
-  const subFolderDivInnerHTML = `<h3 class="folder_section--added-subfolders-title subfolder-title">${newSubFolder.subFolderName}</h3> <div class="subfolder-span-container"> <div class="subfolder-span" id="number-of-index-cards">${indexCardsArray.length}</div> <div class="subfolder-span">Description of Content</div> </div> <div class="subfolder-button-container"> <button class="subfolder-button subfolder-button-learn">Learn</button> <button class="subfolder-button subfolder-button-edit">Edit</button> <button class="subfolder-button subfolder-button-delete"> Delete </button> </div>`;
+  const subFolderDivInnerHTML = `<h3 class="folder_section--added-subfolders-title subfolder-title">${newSubFolder.subFolderName}</h3> <div class="subfolder-span-container"> <div class="subfolder-span" id="number-of-index-cards">${indexCardsArray.length} Index Cards</div> <div class="subfolder-span">Description of Content</div> </div> <div class="subfolder-button-container"> <button class="subfolder-button subfolder-button-learn">Learn</button> <button class="subfolder-button subfolder-button-edit">Edit</button> <button class="subfolder-button subfolder-button-delete"> Delete </button> </div>`;
 
   const subFolderDiv = document.createElement("div");
   subFolderDiv.className = "folder_section--added-subfolders";
@@ -222,3 +250,124 @@ addSubFolderButton.addEventListener("click", (e) => {
 });
 
 // defining functionality for edit button within the subfolder
+
+// edit button
+
+const choiceFieldContainer = document.querySelector(".container");
+const choiceFieldCross = document.querySelector(".cross-container");
+
+choiceFieldCross.addEventListener("click", () => {
+  choiceFieldContainer.style.visibility = "hidden";
+});
+const editButtonClickEvent = subFolderContainer.addEventListener(
+  "click",
+  (event) => {
+    if (event.target.classList.contains("subfolder-button-edit")) {
+      choiceFieldContainer.style.visibility = "visible";
+    }
+  }
+);
+
+// learn button
+
+// delete button
+
+// add index card type container
+
+const buttonLeft = document.querySelector(".button-left");
+const buttonRight = document.querySelector(".button-right");
+const buttonTop = document.querySelector(".button-top");
+const buttonContainer = document.querySelector(".button-container");
+const buttons = document.querySelectorAll(".button");
+const boxLeft = document.querySelector(".left");
+const boxRight = document.querySelector(".right");
+const boxTop = document.querySelector(".top");
+const text = document.querySelector(".text-container");
+const addSingleAnswerCard = document.querySelector(".add-indexcard-button");
+
+buttonLeft.addEventListener("click", () => {
+  boxLeft.classList.toggle("margin-left-100");
+  text.classList.toggle("text-margin-left-minus-1000");
+});
+
+buttonRight.addEventListener("click", () => {
+  boxRight.classList.toggle("margin-right-100");
+  text.classList.toggle("text-margin-left-1200");
+});
+
+buttonTop.addEventListener("click", () => {
+  boxTop.classList.toggle("margin-top-100");
+  text.classList.toggle("text-margin-top-minus-10rem");
+  text.classList.toggle("text-margin-top-10rem");
+});
+
+const buttonArray = [buttonTop, buttonLeft, buttonRight];
+
+function handleClick(event) {
+  const clickedButton = event.target;
+  console.log(clickedButton);
+
+  buttonArray.forEach((button) => {
+    if (button !== clickedButton) {
+      button.style.visibility =
+        button.style.visibility === "hidden" ? "" : "hidden";
+    }
+
+    clickedButton.classList.toggle("button-lower-clicked");
+    if (button.hasAttribute("data-original-innerhtml")) {
+      button.innerHTML = button.getAttribute("data-original-innerhtml");
+
+      button.removeAttribute("data-original-innerhtml");
+    } else {
+      button.setAttribute("data-original-innerhtml", button.innerHTML);
+
+      button.innerHTML = "Back";
+    }
+  });
+
+  buttonContainer.classList.toggle("button-container-lower");
+}
+
+buttonArray.forEach((button) => {
+  button.addEventListener("click", handleClick);
+});
+
+//pop up button handling
+
+// edit --> add indexcards button
+
+export let indexCardsArray = [];
+let singleAnswerCards = [];
+let multipleChoiceCards = [];
+let openFormatCards = [];
+
+class IndexCard {
+  constructor(question, answer, type, subFolder) {
+    this.question = question;
+    this.answer = answer;
+    this.type = type;
+    this.subFolder = subFolder;
+  }
+}
+
+singleChoiceButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  const questionInput = document.getElementById("single-word-question-field");
+  const answerInput = document.getElementById("single-word-answer-field");
+  const type = "single-word-question";
+
+  const singleAnswerCard = new IndexCard(
+    questionInput.value,
+    answerInput.value,
+    type
+  );
+
+  singleAnswerCards.push(singleAnswerCard);
+  indexCardsArray.push(singleAnswerCard);
+
+  // Clear form fields
+  questionInput.value = "";
+  answerInput.value = "";
+});
+
+console.log(indexCardsArray);
