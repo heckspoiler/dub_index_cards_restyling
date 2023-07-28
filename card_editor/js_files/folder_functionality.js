@@ -155,7 +155,7 @@ const subFolderForm = document.querySelector(
   ".index_cards_creating_subfolder_container"
 );
 const subFolderNameInput = document.querySelector("#subfolder-name");
-export const subFolderContainer = document.querySelector(
+const subFolderContainer = document.querySelector(
   ".folder_section--added-subfolders-container"
 );
 
@@ -236,7 +236,7 @@ addSubFolderButton.addEventListener("click", (e) => {
 
   newSubFolder = new SubFolder(subFolderNameInput.value.toUpperCase());
 
-  const subFolderDivInnerHTML = `<h3 class="folder_section--added-subfolders-title subfolder-title">${newSubFolder.subFolderName}</h3> <div class="subfolder-span-container"> <div class="subfolder-span" id="number-of-index-cards" class="number-of-index-cards-class">0 Index Cards</div> <div class="subfolder-span">Description of Content</div> </div> <div class="subfolder-button-container"> <button class="subfolder-button subfolder-button-learn">Learn</button> <button class="subfolder-button subfolder-button-edit">Edit</button> <button class="subfolder-button subfolder-button-delete"> Delete </button> </div>`;
+  const subFolderDivInnerHTML = `<h3 class="folder_section--added-subfolders-title subfolder-title">${newSubFolder.subFolderName}</h3> <div class="subfolder-span-container"> <div class="subfolder-span" id="number-of-index-cards" class="number-of-index-cards-class">0 Index Cards</div> <div class="subfolder-span">Description of Content</div> </div> <div class="subfolder-button-container"> <button class="subfolder-button subfolder-button-learn">Learn</button> <button class="subfolder-button subfolder-button-edit">Add</button> <button class="subfolder-button subfolder-button-delete"> Delete </button> </div>`;
 
   const subFolderDiv = document.createElement("div");
   subFolderDiv.className = "folder_section--added-subfolders";
@@ -356,8 +356,11 @@ class IndexCard {
   }
 }
 
+console.log(newSubFolder);
+
 singleChoiceButton.addEventListener("click", (e) => {
   e.preventDefault();
+  console.log(singleChoiceButton);
   const questionInput = document.getElementById("single-word-question-field");
   const answerInput = document.getElementById("single-word-answer-field");
   const type = "single-word-question";
@@ -380,29 +383,4 @@ singleChoiceButton.addEventListener("click", (e) => {
   // Clear form fields
   questionInput.value = "";
   answerInput.value = "";
-
-  console.log(newSubFolder);
-  console.log(newSubFolder.allIndexCards);
-});
-
-multipleChoiceButton.addEventListener("click", (e) => {
-  e.preventDefault();
-  const questionInput = document.getElementById(
-    "multiple-choice-question-field"
-  );
-  const answerInput = document.getElementById("multiple-choice-answer-field");
-  const type = "multiple-choice-question";
-  newSubFolder = new SubFolder(type, questionInput.value, answerInput.value);
-  newSubFolder.multipleChoiceIndexCards.push(newIndexCard);
-  newSubFolder.allIndexCards.push(newIndexCard);
-  document.querySelector(
-    ".number-of-index-cards-class",
-    activeSubFolderDiv
-  ).innerHTML = `${newSubFolder.allIndexCards.length} Index Cards`;
-  choiceFieldContainer.style.visibility = "hidden";
-  questionInput.value = "";
-  answerInput.value = "";
-  console.log(newSubFolder);
-  console.log(newSubFolder.allIndexCards);
-  console.log(newSubFolder.multipleChoiceIndexCards);
 });

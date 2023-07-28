@@ -115,7 +115,7 @@ font-family: "Rubik Mono One", sans-serif;*/
 /* index card type choice field */
 
 .container {
-  visibility: visible;
+  visibility: hidden;
   height: 40rem;
   width: 40rem;
   border: 1px solid black;
